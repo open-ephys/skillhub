@@ -1,0 +1,9 @@
+﻿,Intan headstages,Low profile OE headstage,Acquisition board,ONIX system,Commutator,Miniscope V4,Miniscope V3,Miniscope DAQ v3.3
+Intan headstages,,NA,YES,NO,NO,NA,NA,NO
+Low profile OE SPI headstage,NA,,YES,YES,NO,NA,NA,NO
+Acquisition board,YES,YES,,NA,NO,NO,NO,NA
+ONIX system,NO,YES,NA,,YES,YES,NO,NA
+Commutator,NO,NO,NO,YES,,YES,NO,YES
+Miniscope V4,NA,NA,NO,YES,YES,,NA,YES
+Miniscope V3,NA,NA,NO,NO,NO,NA,,YES
+Miniscope DAQ v3.3,NO,NO,NA,NA,YES,YES,YES,

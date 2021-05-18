@@ -1,0 +1,6 @@
+:notoc:
+.. _refimpedance:
+
+
+Impedance
+=============
