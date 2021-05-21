@@ -1,7 +1,7 @@
 .. toctree::
    :maxdepth: 3
 
-.. _refEDay2:
+.. _refEDay2TA:
 
 .. |Ve| replace:: V\ :sub:`e`\
 .. |Ce| replace:: C\ :sub:`e`\
@@ -18,7 +18,7 @@ Exercises Day 2
 Impedance
 ***********
 
-Previously, we built the circuit below using the circuit simulator. We saw that the electrode cannot drive a cable that has a shunt capacitance, but that an amplifier can protect our signal source and provide current to power the rest of the circuit.
+Previously, we built the circuit below using the circuit simulator. We saw that the electrode cannot drive a cable that has a shunt capacitance, but that an amplifier can protect our signal source and provide current to power the rest of the circuit.s
 
 .. raw:: html
 
@@ -42,6 +42,10 @@ Build voltage rails
 ####################
 .. warning::
   Make sure that the pins from the batteries do not touch, and if they’re not in use, best to put some tape on them so they don’t touch things. ‘Short-circuiting’ the batteries (connecting them without any sort of resistance) causes a huge current to flow from the + to -, enough to... melt stuff.
+
+
+.. note::
+  This is way easier if you check that everyone has the blue line of the breadboard at the top, the battery holders on the right, and the teensy on the left from the start. Removing the teensy can bend the pins, if they put it all the way to the left, they can leave it there all week.
 
 First, we need to make the ‘rails’ that will provide the voltage for our op-amp. - this means that we need to have a positive and negative voltage ready, so that we can amplify a signal that lives around some reference level that we shall call 0 volt. If we only have 0 and +3V then any negative signal will floor and stay at 0.
 
@@ -92,6 +96,9 @@ Now we will build the equivalent of having an electrode picking up a neuronal si
          </div>
      </div>
 
+.. note::
+  In the previous examples we had a shunt capacitance going to ground. Now, we have a going to ground, this is because of the slow frequency of the blink signal (remember slow freq = high capacitor impedance, so at the really slow blink frequency (0.5 Hz) we don’t actually lose a lot of voltage over the capacitance to ground). Our real, neuron signals are way faster, and then the shunt capacitance becomes a problem. To represent how long cables can cause us to lose signal, for this low frequency, we use a resistor to ground.
+
 1.	Upload the Blink example to your teensy (or just run it if still loaded).
 2.	Send the teensy output through a 1MOhm resistor. This makes it behave a bit like a biological signal coming from an electrode.
 3.	A 22kOhm resistor to ground simulates the signal lost to ground over a really long wire.
@@ -100,7 +107,7 @@ Now we will build the equivalent of having an electrode picking up a neuronal si
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-38.png" class="card-img-top">
         </div>
@@ -108,7 +115,7 @@ Now we will build the equivalent of having an electrode picking up a neuronal si
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-39.png" class="card-img-top">
         </div>
@@ -199,6 +206,9 @@ Now measure the same three points as before and complete this table:
 .. hint::
   The wire now cannot destroy our signal, because even though we did not amplify it at all (we only have unity gain) we ‘buffered’ it. Now the op-amp can push as much current into the wire as is needed and your signal makes it through.
 
+.. note::
+  Adding in the amplifier 'headstage' should protect the signal both at the readout wire and the electrode resistor, going from mV range in the long wire configuration to V range with the headstage. Try asking whether people understand why it's also higher at the electrode- if students find that strange it's often because they're thinking of the amplifier as actually increasing the signal (as in, introducing a gain) rather than realising that it is the high input impedance that is protecting our signal.
+
 Differential Signals
 *********************
 A.	Measure across your fingers with the oscilloscope 1x probe. How big is the amplitude of this signal? Compare this to the size of a spike, around 100 µV.  Could you see a spike on top of that noise?
@@ -211,12 +221,12 @@ You can think of the small square waves as spikes you are trying to detect, and 
 
 .. raw:: html
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
       <div class="card text-center intro-card border-white">
       <img src="../_static/images/EEA/eea_fig-44.png" class="card-img-top">
-      </div>
-      <div class="card-body">
-      <h5 class="card-title" > https://tinyurl.com/y5pw86ox </h5>
+        <div class="card-body">
+        <h5 class="card-title" > https://tinyurl.com/y5pw86ox </h5>
+        </div>
       </div>
   </div>
 
@@ -231,29 +241,40 @@ A.	Connect the reference and spike signal to your simulated electrode circuit, a
       </div>
   </div>
 
+.. note::
+  We have managed to subtract the reference signal (as the output displays square waves), and our input signal is protected (no current is being drawn), but the output is saturating. This is a consequence of the huge gain of the op-amp mentioned earlier. This means we can’t just use it as a differential amplifier- any tiny difference between the inverting and non-inverting inputs will get amplified so much that the output will saturate, and be equal to whatever voltage is powering the amplifier (in this case, + and - 15 V).
+
 As before, we need to do something to prevent our amplifier from always hitting power-rail values. We can provide negative feedback to the amplifier by looping the output back and feeding it into one of the terminals. The amplifier is going to do the same thing as before; output the difference between + and - multiplied by its huge gain. The output will rise rapidly, however this time, as soon as it reaches the value of the + terminal, the + and – are the same value and there’s no difference left to amplify.
 
 B.	Put the reference signal to one side/ delete it for now. Connect the amplifier output to the inverting input. What happens to your output now? What is the gain?
 
 .. raw:: html
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
       <div class="card text-center intro-card border-white">
       <img src="../_static/images/EEA/eea_fig-46.png" class="card-img-top">
+      </div>
   </div>
+
+.. note::
+  Now we’re just seeing our input signal replicated at the output of the amplifier with a gain of 1.
+  `circuit link <https://tinyurl.com/y6tkhc79>`_
 
 We’ve stopped it saturating, but we still can’t amplify, or subtract our reference electrode.
 Let’s start with amplifying. If we only feedback 50% of the output voltage, the amplifier will again detect a difference between the + and - terminals, and will increase (double) its output voltage until - and + are equal once more. We can vary the proportion of the output voltage that we feed back, in order to adjust the gain of our amplifier. To do so, we need to divide the voltage into the part we want to send to the amplifier, and the part we want to get rid of, which we can route to ground.
 
-C.	Add resistors to your simulated circuit to build an amplifier with a gain of 2, using what you learned about voltage dividers on day 1. The answer is on the next page.
+C.	Add resistors to your simulated circuit to build an amplifier with a gain of 2, using what you learned about voltage dividers on day 1. The answer is below, try it on your own first.
 
 .. raw:: html
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
       <div class="card text-center intro-card border-white">
       <img src="../_static/images/EEA/eea_fig-47.png" class="card-img-top">
       </div>
   </div>
+
+.. note::
+    `circuit link <https://tinyurl.com/y2aj8bvj>`_
 
 Now we have a. protected our signal and b. amplified it! We want to introduce our reference again. How can we do that, and keep all those other properties we worked so hard for? To do this we first need to introduce a few ideas you’ve seen in the op-amp video already. It’s all stuff we’ve seen before, we’ll just swap some things around a bit.
 
@@ -261,9 +282,12 @@ First, we will build an inverting op-amp. Because the feedback needs to go to th
 
 D.	Build this inverting op amp. Check in the simulator that this virtual ground really works. If this is still mysterious, watch the section in the video (here: https://youtu.be/7FYHt5XviKc?t=933 ).
 
-Ok now we have the inverting amplifier, what good is that? Well, we can now replace the ground at the ‘+’ input with something else. For instance, with a positive voltage so that our virtual ground sits at 2.5V.
+Ok now we have the inverting amplifier, what good is that? Well, we can now replace the ground at the ‘+’ input with something else.
 
-E.	Add this +2.5 V. What happens to the output?
+E.	Add a constant +2.5 V to the input. What happens to the output?
+
+.. note::
+  It should be shifted upwards, replacing the virtual ground of 0 with +2.5
 
 Because the initial input was already inverted, by adding to that we have now effectively subtracted one voltage from another. Yay!  Now we basically have what we want, we just need to replace the stable offset voltage at ‘+’ with the 2nd signal we wish to subtract.
 Does this work? What went wrong? Try to figure this out but don’t get stuck forever.
@@ -271,6 +295,10 @@ Does this work? What went wrong? Try to figure this out but don’t get stuck fo
 Now we’re pretty much there! The only thing left is that right now our amp outputs-the difference '*' -1, so just swap the inputs and we’re there. Voila a differential amplifier!
 
 F.	In the simulator, re-create a differential amplifier.
+
+.. note::
+  The reference coming into the - means that the amplifier no longer has to provide this output in order to make the + and – match, so we get rid of the shared signal.
+  Need to look at difference: want: https://tinyurl.com/y4aps4r2
 
 G.	If you have this circuit working, start changing the 10M resistor on the top to another value and see what happens.
    * Change it to 11M or so. This is very roughly what a normal op-amp would look like. We’re getting some noise but it's not horrible yet.
@@ -281,6 +309,24 @@ Op-amps don’t have perfectly matched input impedances and simple differential 
 So, can we use this shiny new differential amplifier to record neural signals? We worked so hard to avoid drawing current from our frail electrode signal, and now we’re telling you to put big voltage dividers right at the inputs of our op-amp? That seems bad. Also, as we’ve just simulated, often op-amps do not have equal input impedances across + and -! This is like the example form earlier where we modelled a long wire except that now you have two differently long wires in front of your inputs.
 
 For tomorrow: Consider, what could we do to prevent these issues?
+
+TA Wrap Up
+================
+
+Puzzle for extra credit: How can we preserve the nice differential properties of the amplifier we just built, but still have our signals go straight into like a ‘+’ terminal on an op-amp to avoid impedance imbalances, and to avoid drawing current through voltage dividers? Extra hint: op-amps are cheap.
+Solution: ‘buffer’ the inputs individually before they are subtracted, and then the differences in input impedances don't matter! This is building an ‘instrumentation amplifier’ out of 3 op-amps:
+https://tinyurl.com/yjxekrv5
+
+.. raw:: html
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
+    <div class="card text-center intro-card border-white">
+    <img src="../_static/images/EEA/eea_fig-34.png" class="card-img-top">
+    </div>
+</div>
+
+So far: we know how to protect our signal and amplify it. Tomorrow we’ll look at getting signals from our electrodes, filtering them, and sending them to our computer.
+
 
 Acknowledgements
 ===============================

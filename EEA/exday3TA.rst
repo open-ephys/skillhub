@@ -15,6 +15,10 @@
 Exercises Day 3
 ================================
 
+.. note::
+  By end of day; everyone should have EMG. This day is usually a lot of debugging and going over things that have been covered before, making sure everyone understands what is going on.
+
+
 Today we are going to build an EMG circuit! We'll use the electrodes in your kit, an instrumentation amplifier as our headstage, and the Teensy will be our acquisition board. We now have all the steps of the acquisition in place to simulate a lab experiment.
 
 .. raw:: html
@@ -105,6 +109,8 @@ C. Open Bonsai and create an Analog Input node.
         </div>
     </div>
 
+.. note::
+  It should work with just ‘AnalogInput’. It’s nicer to use the ‘CreateArduino’ node and specify the Teensy, this also allows you to set the sampling interval, so you can increase it if the computer is struggling. Use .csvwriter to save signals.
 
 Shifting the signal
 ^^^^^^^^^^^^^^^^^^^^^

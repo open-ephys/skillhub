@@ -2,7 +2,7 @@
    :hidden:
 
    safety.rst
-   eeasoftware.rst
+   software_requirements.rst
    exday1.rst
    exday2.rst
    exday3.rst
