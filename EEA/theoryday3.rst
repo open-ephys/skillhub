@@ -12,8 +12,8 @@
 .. |Vec| replace:: V\ :sub:`ec`\
 .. |Vout| replace:: V\ :sub:`out`\
 
-Theory Day 3: Filtering and Digitizing
-=======================================
+Theory Day 3
+=================
 
 Last time, we saw that an instrumentation amplifier should be pretty good at creating a proper differential signal, even if it is riding on top of a pretty large ‘noise’ signal. Today we will go over filters, put an instrumentation amplifier circuit together, and record some EMG signals.
 
@@ -28,18 +28,23 @@ Last time, we saw that an instrumentation amplifier should be pretty good at cre
         </div>
     </div>
 
+Today's Talks
+****************
+
+`Link to Jakob Voigts' talk about Instrumentation Amplifiers. <https://www.youtube.com/watch?v=uPcv0gBjqbA>`_
+
+`Link to Jakob Voigts' talk about Ground vs Reference. <https://www.youtube.com/watch?v=YE2cdXtzlF4>`_
+
 Instrumentation amplifiers
 ****************************
 Let's quickly revisit why we can't just use 1 operational amplifier to get a nice signal.
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 80%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-49.png" class="card-img-top">
-          <div class="card-body">
-          <h5 class="card-title" > https://tinyurl.com/y4aps4r2 </h5>
-          </div>
+        <a href="https://tinyurl.com/y4aps4r2 " class="btn btn-light stretched-link">Simulator Link</a>
         </div>
     </div>
 
@@ -55,16 +60,14 @@ The solution is to use *three* op-amps:
         </div>
     </div>
 
-Here it is in the simulator
+Here it is in the simulator:
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-53.png" class="card-img-top">
-          <div class="card-body">
-          <h5 class="card-title" > https://tinyurl.com/yjxekrv5 </h5>
-          </div>
+        <a href="https://tinyurl.com/yjxekrv5" class="btn btn-light stretched-link">Simulator Link</a>
         </div>
     </div>
 
@@ -74,15 +77,20 @@ Common mode rejection ratio (CMMR)
 When the input impedances of the differential amplifier weren’t matched, part of the input signal that was common to both inputs, and thus should be cancelled out, actually appeared in the output. A common way to model how well an amplifier subtracts one input to the other is the following:
 We define each input (+ and -) to be a sum of an individual voltage (V1 or V2) plus a voltage common to both. In our arms, or the brain of an animal, this common voltage (Vc) could be electrical noise or muscle activity we are not interested in and want to discard. In this case, the inputs would be:
 
-..math::
+.. math::
   V+ = V1 + Vc
+.. math::
   V- = V2 + Vc
 
 (In our earlier examples of a differential amplifier, V2 was ground 0V, which is a perfectly valid value). In an **ideal** differential amplifier, the output should be the difference of both amplified by a factor:
 
 .. math::
   Vout = Ad (V+ - V-)
+
+.. math::
        = Ad ((V1+Vc)-(V2+Vc))
+
+.. math::
        = Ad (V1-V2)
 
 Where Ad is the differential gain, the factor by which the differential signal is amplified.
@@ -107,7 +115,7 @@ or
 if measured in decibels.
 
 The higher the CMRR, the better the amplifier is at cancelling out the signals common to both inputs.
-Instrumentation amplifiers are not completely immune to common input noise. They are real circuits and, as such, there are multiple ways for these common signals to bleed out into the output. They have, however, a very high CMRR. Comparing the two devices we’ve been using, the operational amplifier LM358 has a CMRR of 80dB while the instrumentation amplifier has a CMRR of 120dB , 100 times higher! (Sounds underwhelming? Remember decibels are logarithmic; the difference between 80 and 120 dB in terms of sound is the difference between a toilet flushing and a jet engine).
+Instrumentation amplifiers are not completely immune to common input noise. They are real circuits and, as such, there are multiple ways for these common signals to bleed out into the output. They have, however, a very high CMRR. Comparing the two devices we’ve been using, the operational amplifier LM358 has a CMRR of 80dB while the instrumentation amplifier has a CMRR of 120dB, 100 times higher! (Sounds underwhelming? Remember decibels are logarithmic; the difference between 80 and 120 dB in terms of sound is the difference between a toilet flushing and a jet engine).
 
 High pass and low pass filtering
 ************************************
@@ -184,17 +192,14 @@ Here’s what this may look like:
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 50%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-59.png" class="card-img-top">
-        <div class="card-body">
-        <h5 class="card-title" > https://tinyurl.com/yadu834g </h5>
-        </div>
+        <a href="https://tinyurl.com/yadu834g " class="btn btn-light stretched-link">Simulator Link</a>
         </div>
     </div>
 
 In practice, many ADCs still use the same basic idea of using op-amps as comparators, but instead of comparing millions of values to obtain a precise measurement, they generate a reference voltage from an internal DAC and adjust that until it matches the input voltage, or use some other clever tricks.
-
 
 .. raw:: html
 
@@ -215,15 +220,12 @@ As a more concrete way to think about it regarding the circuit: imagine you just
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-53.png" class="card-img-top">
-        </div>
-        <div class="card-body">
-        <h5 class="card-title"> https://tinyurl.com/yjxekrv5 </h5>
+        <a href=" https://tinyurl.com/yjxekrv5" class="btn btn-light stretched-link">Simulator Link</a>
         </div>
     </div>
-
 
 The ‘-’ inputs of the two input op-amps are connected to ground, via a bunch of resistors. If you are charged to 10kV compared to ground, we’re asking these op-amps to deal with pretty high values individually, and they will saturate. Even if here we did not include rails in the simulation, remember that each op-amp can only go as high or low as its voltage rails (3V in our case, so with a 100x gain, a 0.03V input saturates the amplifier).
 
@@ -248,8 +250,9 @@ Written by:
 With material from:
 
 * Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.
-* Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)
-* Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
+* Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at  `TENSS <https://www.tenss.ro/>`_)
+* Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for `TENSS <https://www.tenss.ro/>`_)
+* Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
 
 Licensing
 ===============

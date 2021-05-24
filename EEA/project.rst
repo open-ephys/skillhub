@@ -15,5 +15,3 @@ you find interesting. Possibilities are:
 
 When deciding on your project, try to break it down into steps. The best projects are designed to be
 successful even if they are not complete.
-
-If you want to use Bonsai to work more on your EMG acquisition, you can find a helpful introduction `here: <https://neurogears.org/wustl-2019/worksheets/acquisition/>`.

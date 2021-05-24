@@ -168,11 +168,11 @@ h2 {
 
 h3 {
   margin: 2.75rem 0 1.05rem;
-  font-family:"Proxima Nova", sans-serif;
+  font-family:"Miso", sans-serif;
   font-weight: 400;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 h4 {
@@ -401,6 +401,18 @@ i.fa-twitter-square:before {
   color: #333;
 }
 
+.btn stretched-link {
+  background-color: #FFFFFF;
+  border: none;
+  color: #484848;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  max-width: 220px;
+  padding: 0.5rem 0rem;
+}
 
 .custom-button {
   background-color: #FFFFFF;
@@ -425,7 +437,6 @@ i.fa-twitter-square:before {
   margin-bottom: 0rem;
   color: #5CAFBC;
 }
-
 
 .store-button {
   background-color: #5CAFBC;

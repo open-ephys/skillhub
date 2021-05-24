@@ -40,7 +40,7 @@ If you want to use the entire length of the breadboard, you will have to connect
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-10.png" class="card-img-top">
           </div>
@@ -53,7 +53,7 @@ The kit includes a Teensy pinout card:
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 40%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-11.png" class="card-img-top">
           </div>
@@ -69,13 +69,13 @@ F.	We can see that digital pin 13 has (LED) written beside it. Attach readout wi
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-12.png" class="card-img-top">
           </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-13.png" class="card-img-top">
           </div>
@@ -87,9 +87,10 @@ A. Your Picoscope comes with two probes, you only need one. Connect it to the �
 B. Set the slider on the probe itself to ‘1x’. Connect your PicoScope to your pc and open up the Picoscope software.
 C. Use the PicoScope to measure the blink signal at the readout wires, as you did with your multimeter. Make sure you play around to find nice X and Y scaling. What shape & amplitude does the signal have?
 
+
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-14.png" class="card-img-top">
           </div>
@@ -99,22 +100,24 @@ If you see something odd, check:
 
 *	x-axis scaling (ms/div )
 *	y-axis scaling (Auto doesn’t always work)
-*	whether it is set to DC (direct current) or AC (alternating      current).
+*	whether it is set to DC (direct current) or AC (alternating current).
 
 We’ll now use the Teensy microcontroller to output a sine wave, instead of the blink example.
 
 D. Open the Arduino Software Upload the following code to your teensy:
-  Sinewave.ino
+
+:ref:`sinewave`
 
 Make sure that under ‘Tools/ Board’ your Teensy 3.2 has been found, and check which USB (COM) port it’s in (‘Tools/Port:).
 If you see ‘Done Uploading’, the Teensy will start giving a sine wave as output from one of the analog output pins.
 
 E.	Measure the output with your multimeter, from pin A14.
+
 F.	Connect your oscilloscope probe to A14 and visualise the signal in your PicoScope software.
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-15.png" class="card-img-top">
           </div>
@@ -133,10 +136,10 @@ When looking at a whole circuit, we can use this to calculate how much current w
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 60%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-16.png" class="card-img-top">
-        <h5 class="card-title" > https://tinyurl.com/y4r8nsnj</h5>
+        <a href="https://tinyurl.com/y4r8nsnj" class="btn btn-light stretched-link">Simulator Link</a>
         </div>
     </div>
 
@@ -146,15 +149,15 @@ current in the circuit responds.
 
 4.	Resistors
 ********************************************
-Here’s another simulation demonstrating Ohm’s law. This time, the current moves from a 5 Volt voltage source into ground (earth), across one of two resistors.
+Here’s another simulation demonstrating Ohm’s law. This time, the current moves from a 5 Volt voltage source (bright green) into ground (grey, earth), across one of two resistors.
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 50%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-17.png" class="card-img-top">
-          <h5 class="card-title" >  https://www.falstad.com/circuit/e-ohms.html</h5>
-          </div>
+        <a href="https://www.falstad.com/circuit/e-ohms.html" class="btn btn-light stretched-link">Simulator Link</a>
+        </div>
     </div>
 
 A.	Display the voltage and current over both resistors in the ‘scope’ (right click/show in new scope). What will happen to the voltage over the left resistor if you double its resistance? What will happen to the current?
@@ -165,17 +168,20 @@ B.	What will happen to the voltage and current over the left-hand resistor? Doub
 In simulator
 ################
 When we measure how much voltage is provided by a voltage source (such as a battery, or the output from the Teensy), we always measure it relative to a point that we consider 0V. In a circuit powered by a battery, we consider the negative terminal to be at 0V. If there is a connection to earth, or ground, this is taken as 0V.
-Voltage (potential energy) ‘drops’ over each resistor as potential energy is converted to another form of energy (heat/light etc.). In a circuit powered by a 9V battery, all 9V of potential energy from our battery source must drop over circuit components, so that we end up back at 0V.
+
+Voltage (potential energy) ‘drops’ over each resistor, as potential energy is converted to another form of energy (such as heat or light). In a circuit powered by a 9V battery, all 9V of potential energy from our battery source *must* drop over circuit components, so that we end up back at 0V.
+
+The higher the value of the resistor, the higher the voltage drop over it, but the total voltage drop over the circuit must equal the provided voltage.
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 50%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "width: 150%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-18.png" class="card-img-top">
-          </div>
+        </div>
     </div>
 
-In a circuit with multiple resistors in series, the ratio of their resistances determines how much voltage will drop over each. That means that we can split up (divide) the voltage from the source across resistors. If we measure the voltage in between these resistors as |Vout|:
+That means that, in a circuit with multiple resistors in series, the ratio of their resistances determines how much voltage will drop over each. We can therefore split up (divide) the voltage from a source across resistors. If we measure the voltage in between these resistors as |Vout|:
 
 .. math::
 
@@ -187,8 +193,7 @@ On breadboard
 ################
 We’ll now build the circuit you just designed in real life, using a solderless breadboard.
 
-B.	Use the battery holder and two AA batteries to create a 3V source. Use two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of wire at each point you want to measure.
-
+B.	Use the battery holder and two AA batteries to create a 3V source. Use any two resistors from your kit to build a voltage divider, as shown below. If your multimeter doesn’t fit in the breadboard holes, you can place a short piece of wire at each point you want to measure.
 
 .. raw:: html
 
@@ -204,8 +209,8 @@ B.	Use the battery holder and two AA batteries to create a 3V source. Use two re
           </div>
     </div>
 
-C.	Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?
-
+.. hint::
+  Bonus exercise: Replace one of the resistors to make your output voltage as small as you can get it. What’s the smallest reading you can still pick up with your multimeter? How does this compare to the amplitude of a spike measured in the extracellular space?
 
 6. Capacitors
 ******************
@@ -215,36 +220,39 @@ C.	Replace one of the resistors to make your output voltage as small as you can 
 Capacitors, direct current
 ################################
 Capacitors are made of two conducting plates, separated by an insulating material that prevents the plates from touching. Charges cannot jump through the insulating layer. Instead, charges collect on one plate, forming an electric field that pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
-The amount of charge (Q) a capacitor can separate depends on is its capacitance (C, measured in farads) and the voltage (V) across the capacitor.
 
 .. math::
 
   Q = C * V
+
+The amount of charge (Q) a capacitor can separate depends on is its capacitance (C, measured in farads) and the voltage (V) across the capacitor.
+
 
 In a direct current circuit, current will flow while the capacitor charges, as charge is pushed or pulled on either plate. Current flow will stop once the capacitor is fully charged. This electric charge can be discharged (and, for instance, used to power something) by providing a path that connects the positive and negative charges of the capacitor.
 In this simulation, you can charge and discharge a capacitor and see the current flow through the circuit.
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 60%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 75%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-21.png" class="card-img-top">
-          <h5 class="card-title" >https://www.falstad.com/circuit/e-cap.html</h5>
-          </div>
+        <a href="https://www.falstad.com/circuit/e-cap.html" class="btn btn-light stretched-link">Simulator Link</a>
+        </div>
     </div>
 
 A.	Modify the simulation to power an LED (Draw/Outputs and Labels/Add LED) by the capacitor as it discharges. The simulator will turn the LED red when it is on.
+
 B.	Using the breadboard, build this circuit to charge and discharge one of the large capacitors in your kit.
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-22.png" class="card-img-top">
           </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-23.png" class="card-img-top">
           </div>
@@ -263,27 +271,29 @@ A.	Press ‘Play Audio’ to hear how the sound is modulated as the frequency in
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-24.png" class="card-img-top">
-          <h5 class="card-title" >https://tinyurl.com/yyrvugha</h5>
-          </div>
+        <a href="https://tinyurl.com/yyrvugha" class="btn btn-light stretched-link">Simulator Link</a>
+        </div>
     </div>
 
 When we were only dealing with resistors, changes in our circuit happened instantly. We have seen that introducing a capacitor into our circuit means that we have to take time into account, as it takes time for the capacitor to charge and discharge. Resistors are not sensitive to changes in frequency, but capacitors are.
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 70%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-25.png" class="card-img-top">
-          <h5 class="card-title" >https://tinyurl.com/yyrvugha</h5>
-          </div>
+        <a href="https://tinyurl.com/y3sbgfl6" class="btn btn-light stretched-link">Simulator Link</a>
+        </div>
     </div>
 
 Here are two circuits, both provided by an alternating voltage source with a different frequency. In the scope below, the voltage trace of the source and the capacitor are plotted.
+
 B.	Change the simulator oscilloscope to display the current in the circuit (for instance the current flowing through the stretch of wire).
 C.	Add a third circuit, powered by an alternating voltage source of 120 Hz. What happens as the frequency increases?
+
 To describe restriction of direct current flow, we used resistance (R). To describe opposition to alternating current, we need to use the term Impedance (Z)and takes into account time-varying signals. We will discuss this in more detail tomorrow. For now, it is important to know that the impedance magnitude of a capacitor, also called reactance (X\ :sub:`c`), depends on:
 
 .. math::
@@ -291,8 +301,9 @@ To describe restriction of direct current flow, we used resistance (R). To descr
    Xc = \frac{1}{2 \pi fC}
 
 
-Where f is the frequency with which the current alternates, and C is the capacitance. With increased frequency or capacitance, a capacitor will provide less restriction of current flow. When you see a capacitor in a circuit, you know you need to think about the frequency of the signal. Steady direct current has no frequency, so X\ :sub:`c` is infinite: capacitors only pass alternating signals.
+Where f is the frequency with which the current alternates, and C is the capacitance. With increased frequency or capacitance, a capacitor will provide less restriction of current flow.
 
+When you see a capacitor in a circuit, you know you need to think about the frequency of the signal. Steady direct current has no frequency, so X\ :sub:`c` is infinite: capacitors only pass alternating signals.
 
 Capacitive voltage divider
 ###################################
@@ -300,11 +311,11 @@ Because capacitors impede current flow, we can use them to build voltage divider
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 75%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 70%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-26.png" class="card-img-top">
-          <h5 class="card-title" >https://tinyurl.com/y5kq7yct</h5>
-          </div>
+        <a href="https://tinyurl.com/y5kq7yct" class="btn btn-light stretched-link">Simulator Link</a>
+        </div>
     </div>
 
 A.	Try changing the capacitance values C for the first capacitor. How does this change your output voltage?
@@ -319,7 +330,7 @@ A.	Use the simulator to build the equivalent circuit of the electrode as shown b
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
-        <img src="../_static/images/EEA/eea_fig-09.png" class="card-img-top">
+        <img src="../_static/images/EEA/eea_fig-9.png" class="card-img-top">
           </div>
         </div>
     </div>
@@ -345,12 +356,10 @@ Above, we described a voltage divider made of two (or more) resistors. Capacitor
 
 G.	What is the ratio between |Ce| and |Cs| at the moment? How much of our voltage |Vec| is reaching the output of our electrode, |Vin|?  What could we change to get more of our voltage signal reaching the output? Try changing values in the simulator to get a larger amplitude output signal.
 
-Save your circuit (export as link/text)!
+Save your circuit (export as link/text) and let your TA know you are finished.
 
 Acknowledgements
 ===============================
-Written by:
-
 Written by:
 
 * Alexandra Leighton
@@ -359,12 +368,12 @@ Written by:
 * Aarón Cuevas López
 * Jon Newman
 
-
 With material from:
 
 * Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.
 * Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)
 * Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
+* Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp.
 
 Licensing
 ===============

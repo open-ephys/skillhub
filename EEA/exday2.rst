@@ -22,12 +22,10 @@ Previously, we built the circuit below using the circuit simulator. We saw that 
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-34.png" class="card-img-top">
-          <div class="card-body">
-          <h5 class="card-title" > https://tinyurl.com/yf9jdf2b </h5>
-          </div>
+        <a href="https://tinyurl.com/yf9jdf2b" class="btn btn-light stretched-link">Simulator Link</a>
         </div>
     </div>
 
@@ -52,9 +50,7 @@ To do this we use a common trick and turn two regular power supplies into a bipo
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-35.png" class="card-img-top">
-          <div class="card-body">
           <h5 class="card-title" > Bipolar power supply on the breadboard </h5>
-          </div>
         </div>
     </div>
 
@@ -82,11 +78,11 @@ Build 'long wire' equivalent circuit
 #######################################
 
 Now we will build the equivalent of having an electrode picking up a neuronal signal, and a long wire connecting this electrode to the recording system, without a headstage in between.
- We’re going to build the circuit below (note the square wave input, just like the blink example). We’re using resistors to model our electrode and shunt voltage divider. For now, we don't need the voltage rails, they will be used to power our amplifier later.
+We’re going to build the circuit below (note the square wave input, just like the blink example). We’re using resistors to model our electrode and shunt voltage divider. For now, we don't need the voltage rails, they will be used to power our amplifier later.
 
  .. raw:: html
 
-     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
          <div class="card text-center intro-card border-white">
          <img src="../_static/images/EEA/eea_fig-37.png" class="card-img-top">
          </div>
@@ -100,7 +96,7 @@ Now we will build the equivalent of having an electrode picking up a neuronal si
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-38.png" class="card-img-top">
         </div>
@@ -108,30 +104,31 @@ Now we will build the equivalent of having an electrode picking up a neuronal si
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-39.png" class="card-img-top">
         </div>
     </div>
 
-6.	Now measure the output with the oscilloscope at the points marked by red arrows in the image below, and complete this table:
+6.	Now measure the output with the oscilloscope at the points marked by red arrows in the image below, and complete the first column of the table below:
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-40.png" class="card-img-top">
         </div>
     </div>
 
+
 .. list-table::
-   :widths: 25 25 25
+   :widths: 40 30 30
    :header-rows: 1
    :align: left
 
    * - (+) Probe Location
      - Signal Amplitude (Long Wire)
-     - Signal Amplitude (Op Amp)
+     - Signal Amplitude (Op-Amp)
    * - 1. Teensy Output Pin 13
      -
      -
@@ -142,7 +139,7 @@ Now we will build the equivalent of having an electrode picking up a neuronal si
      -
      -
 
-How much signal is lost by this ‘recording system’?
+7. How much signal is lost by this ‘recording system’?
 
 Replace 'long wire' with 'headstage'
 ####################################
@@ -153,7 +150,7 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P),
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 60%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-41.png" class="card-img-top">
         </div>
@@ -166,12 +163,12 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P),
 
 .. raw:: html
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-42.png" class="card-img-top">
         </div>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
         <img src="../_static/images/EEA/eea_fig-43.png" class="card-img-top">
         </div>
@@ -180,7 +177,7 @@ This is the op-amp you have.  Make sure you’re looking at the op-amp (LM358P),
 Now measure the same three points as before and complete this table:
 
     .. list-table:: Measuring Signal Amplitude
-       :widths: 33 33 3
+       :widths: 40 30 30
        :header-rows: 1
 
        * - (+) Probe Location
@@ -209,19 +206,23 @@ So far, we have only considered the signal coming into our recording electrode, 
 
 You can think of the small square waves as spikes you are trying to detect, and the sine wave (that both reference and your measurement electrode share) as background- maybe slow EEG signals or 50Hz noise, which is likely to be present at both electrodes.
 
+Our 'goal' circuit has the following properties:
+
+- Measurement electrode input (spikes)
+- Reference electrode input (common noise)
+- Output: Reference subtracted from measurement, multiplied by gain
+- Does not draw current from cells
+
 .. raw:: html
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
-      <div class="card text-center intro-card border-white">
-      <img src="../_static/images/EEA/eea_fig-44.png" class="card-img-top">
-      </div>
-      <div class="card-body">
-      <h5 class="card-title" > https://tinyurl.com/y5pw86ox </h5>
-      </div>
-  </div>
+    <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 75%">
+        <div class="card text-center intro-card border-white">
+        <img src="../_static/images/EEA/eea_fig-44.png" class="card-img-top">
+        <a href="https://tinyurl.com/y5pw86ox" class="btn btn-light stretched-link">Simulator Link</a>
+        </div>
+    </div>
 
 A.	Connect the reference and spike signal to your simulated electrode circuit, and in turn to the op-amp in open-loop configuration. Connect the output of the amplifier to the PC. Run the simulation. What (in V) is the amplifier giving as output?
-
 
 .. raw:: html
 
@@ -231,56 +232,89 @@ A.	Connect the reference and spike signal to your simulated electrode circuit, a
       </div>
   </div>
 
-As before, we need to do something to prevent our amplifier from always hitting power-rail values. We can provide negative feedback to the amplifier by looping the output back and feeding it into one of the terminals. The amplifier is going to do the same thing as before; output the difference between + and - multiplied by its huge gain. The output will rise rapidly, however this time, as soon as it reaches the value of the + terminal, the + and – are the same value and there’s no difference left to amplify.
+We have successfully subtracted the reference signal (as the output displays square waves), and our input signal is protected (no current is being drawn), but the output is saturating. This is a consequence of the huge gain of the op-amp mentioned earlier. This means we can’t just use it as a differential amplifier- any tiny difference between the inverting and non-inverting inputs will get amplified so much that the output will saturate, and be equal to whatever voltage is powering the amplifier (in this case, + and - 15 V).
+
+- Measurement electrode input (spikes) YES
+- Reference electrode input (common noise) YES
+- Output: Reference subtracted from measurement, multiplied by gain YES... but gain is too large!
+- Does not draw current from cells YES
+
+We need to do something to prevent our amplifier from always hitting power-rail values. We can provide negative feedback to the amplifier by looping the output back and feeding it into one of the terminals. The amplifier is going to do the same thing as before; output the difference between + and - multiplied by its huge gain. The output will rise rapidly, however this time, as soon as it reaches the value of the + terminal, the + and – are the same value and there’s no difference left to amplify.
 
 B.	Put the reference signal to one side/ delete it for now. Connect the amplifier output to the inverting input. What happens to your output now? What is the gain?
 
 .. raw:: html
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 100%">
       <div class="card text-center intro-card border-white">
       <img src="../_static/images/EEA/eea_fig-46.png" class="card-img-top">
-  </div>
-
-We’ve stopped it saturating, but we still can’t amplify, or subtract our reference electrode.
-Let’s start with amplifying. If we only feedback 50% of the output voltage, the amplifier will again detect a difference between the + and - terminals, and will increase (double) its output voltage until - and + are equal once more. We can vary the proportion of the output voltage that we feed back, in order to adjust the gain of our amplifier. To do so, we need to divide the voltage into the part we want to send to the amplifier, and the part we want to get rid of, which we can route to ground.
-
-C.	Add resistors to your simulated circuit to build an amplifier with a gain of 2, using what you learned about voltage dividers on day 1. The answer is on the next page.
-
-.. raw:: html
-
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex mx-auto" style = "max-width: 70%">
-      <div class="card text-center intro-card border-white">
-      <img src="../_static/images/EEA/eea_fig-47.png" class="card-img-top">
       </div>
   </div>
 
-Now we have a. protected our signal and b. amplified it! We want to introduce our reference again. How can we do that, and keep all those other properties we worked so hard for? To do this we first need to introduce a few ideas you’ve seen in the op-amp video already. It’s all stuff we’ve seen before, we’ll just swap some things around a bit.
+We’ve stopped it saturating, but we still can’t amplify, or subtract our reference electrode.
 
-First, we will build an inverting op-amp. Because the feedback needs to go to the negative terminal for the op-amp to work/not saturate, both the input and the feedback need to share the ‘-’ input. How does that work? By putting the ‘-’ input in the middle of a voltage divider, with the feedback on one side, and the input on the other. We connect ‘+’ to ground. Now the op-amp will output whatever voltage is needed to keep the ‘-’ at ground level, i.e. 0 V (because we connect ‘+’ to ground, if we had another voltage at ground it would keep ‘-’ at that voltage). What voltage does the amplifier have to output to keep ‘-‘ at 0V?  -1 /* input voltage, i.e. it has to provide directly opposing voltage to whatever comes in at the input. The cool/confusing bit here is that the ‘-’ input is always at 0v - that’s why we call it ‘virtual ground’. This whole thing works due to the fact that current still flows through the circuit, but not into the amp even though the voltage of the node is kept at 0.
+- Measurement electrode input (spikes) YES
+- Reference electrode input (common noise) NO
+- Output: Reference subtracted from measurement, multiplied by gain NO
+- Does not draw current from cells YES
 
-D.	Build this inverting op amp. Check in the simulator that this virtual ground really works. If this is still mysterious, watch the section in the video (here: https://youtu.be/7FYHt5XviKc?t=933 ).
+Let’s start with amplifying.
 
-Ok now we have the inverting amplifier, what good is that? Well, we can now replace the ground at the ‘+’ input with something else. For instance, with a positive voltage so that our virtual ground sits at 2.5V.
+If we only feedback 50% of the output voltage, the amplifier will again detect a difference between the + and - terminals, and will increase (double) its output voltage until - and + are equal once more. We can vary the proportion of the output voltage that we feed back, in order to adjust the gain of our amplifier. To do so, we need to divide the voltage into the part we want to send to the amplifier, and the part we want to get rid of, which we can route to ground.
 
-E.	Add this +2.5 V. What happens to the output?
+C.	Add resistors to your simulated circuit to build an amplifier with a gain of 2, using what you learned about voltage dividers on day 1. The answer is here: :ref:`ampvoltagediv`, but try it on your own first.
 
-Because the initial input was already inverted, by adding to that we have now effectively subtracted one voltage from another. Yay!  Now we basically have what we want, we just need to replace the stable offset voltage at ‘+’ with the 2nd signal we wish to subtract.
-Does this work? What went wrong? Try to figure this out but don’t get stuck forever.
+Now we have a. protected our signal and b. amplified it!
 
-Now we’re pretty much there! The only thing left is that right now our amp outputs-the difference '*' -1, so just swap the inputs and we’re there. Voila a differential amplifier!
+- Measurement electrode input (spikes) YES
+- Reference electrode input (common noise) NO
+- Output: Reference subtracted from measurement, multiplied by gain NO.. but we have a reasonable gain now.
+- Does not draw current from cells YES
 
-F.	In the simulator, re-create a differential amplifier.
+We want to introduce our reference again. How can we do that, and keep all those other properties we worked so hard for?
 
-G.	If you have this circuit working, start changing the 10M resistor on the top to another value and see what happens.
+First, we will build an inverting op-amp. Why? Because both the input and the feedback need to share the ‘-’ input, so that the amplifier doesn't saturate. How does that work? By putting the ‘-’ input in the middle of a voltage divider, with the feedback on one side, and the input on the other. We connect ‘+’ to ground. Now the op-amp will output whatever voltage is needed to keep the ‘-’ at ground level, i.e. 0 V (because we connect ‘+’ to ground, if we had another voltage at ground it would keep ‘-’ at that voltage).
+
+What voltage does the amplifier have to output to keep ‘-‘ at 0V?
+
+.. math::
+  -1 * Vin
+
+i.e. it has to provide directly opposing voltage to whatever comes in at the input.
+
+The cool but confusing bit here is that the ‘-’ input is always at 0V, which is why we call it ‘virtual ground’. This circuit works due to the fact that current still flows through the circuit (but never into the amplifier!), even though the voltage of the node is kept at 0.
+
+D.	Build this inverting op amp. Check in the simulator that this virtual ground really works. If this is still mysterious, watch the section in this video (here: https://youtu.be/7FYHt5XviKc?t=933 ).
+
+Ok now we have the inverting amplifier, what good is that? Well, we have freed up the '+' input and  can now replace the ground at the ‘+’ input with something else.
+
+E.	Add a constant +2.5 V to the input. What happens to the output?
+
+Because the initial input was already inverted, by adding to that we have now effectively subtracted one voltage from another. We are close to having what we want, we just need to replace the stable offset voltage at ‘+’ with the 2nd signal we wish to subtract (our reference).
+
+F. Replace the +2.5 signal with your reference electrode. Does this work? What went wrong? Try to figure this out but don’t get stuck forever. Solution here: :ref:`soldiffamp`.
+
+- Measurement electrode input (spikes) YES
+- Reference electrode input (common noise) YES
+- Output: Reference subtracted from measurement, multiplied by gain NO
+- Does not draw current from cells YES
+
+Now we’re pretty much there! The only thing left is that right now our amp outputs the difference between our measurement and reference, but inverted. So just swap the inputs and we’re there!
+
+G.	In the simulator, re-create a differential amplifier.
+
+- Measurement electrode input (spikes) YES
+- Reference electrode input (common noise) YES
+- Output: Reference subtracted from measurement, multiplied by gain YES
+- Does not draw current from cells YES
+
+H.	If you have this circuit working, start changing the 10M resistor on the top to another value and see what happens.
    * Change it to 11M or so. This is very roughly what a normal op-amp would look like. We’re getting some noise but it's not horrible yet.
    * Now bump up the common mode noise a bit. Change the voltage on both 60Hz sources from 5V to 50V. What happens?
 
-Op-amps don’t have perfectly matched input impedances and simple differential amplifiers don’t have the best impedances. This is why we cannot just use a simple op-amp with a differential topology like here to do neuroscience.
+So, can we use this shiny new differential amplifier to record neural signals? We worked so hard to avoid drawing current from our frail electrode signal, and now we’re telling you to put big voltage dividers right at the inputs of our op-amp? That seems bad. Also, as we’ve just simulated, often op-amps do not have equal input impedances across + and -! This is similar to the example form earlier where we modelled a long wire, except that now you have two wires of different lengths in front of your inputs. If you've every measured electrode impedance, how much variation was there between electrodes? To get this differential amplifier to work, each electrode and resistor would have to be identical, which is, in practice, impossible.
 
-So, can we use this shiny new differential amplifier to record neural signals? We worked so hard to avoid drawing current from our frail electrode signal, and now we’re telling you to put big voltage dividers right at the inputs of our op-amp? That seems bad. Also, as we’ve just simulated, often op-amps do not have equal input impedances across + and -! This is like the example form earlier where we modelled a long wire except that now you have two differently long wires in front of your inputs.
-
-For tomorrow: Consider, what could we do to prevent these issues?
+Puzzle for extra credit: How can we preserve the nice differential properties of the amplifier we just built, but still have our signals go straight into like a ‘+’ terminal on an op-amp to avoid impedance imbalances, and to avoid drawing current through voltage dividers? Extra hint: op-amps are cheap.
 
 Acknowledgements
 ===============================
@@ -295,8 +329,9 @@ Written by:
 With material from:
 
 * Joana Neto, 2018; Materials and neuroscience: validating tools for large-scale, high-density neural recording, 2018.
-* Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at TENSS)
-* Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for TENSS)
+* Jon Newman and Jakob Voigts, 2017; Intro to Chronic Ephys (presentation at `TENSS <https://www.tenss.ro/>`_)
+* Mitra Javadzadeh, 2017; Building an analog ephys recording system (practical exercises developed for `TENSS <https://www.tenss.ro/>`_)
+* Circuit Simulator version 2.4.6js. Original by Paul Falstad, JavaScript conversion by Iain Sharp
 
 Licensing
 ===============
