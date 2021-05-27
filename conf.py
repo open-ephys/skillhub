@@ -21,8 +21,8 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys Wiki"
-copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
+project = "SkillHub"
+copyright = "2020-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
 author = "Open Ephys & Contributors"
 
 # The short X.Y version
@@ -99,7 +99,7 @@ html_style = "_static/theme_overrides.css"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "oe_wiki"
+htmlhelp_basename = "skillhub"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -122,7 +122,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (main_doc, "oe-docs.tex", "Open Ephys Documentation", "Open Ephys", "manual"),
+    (main_doc, "oe-docs.tex", "Open Ephys SkillHub", "Open Ephys", "manual"),
 ]
 
 
@@ -130,7 +130,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(main_doc, "oe-docs", "Open Ephys Documentation", [author], 1)]
+man_pages = [(main_doc, "skillhub", "Open Ephys SkillHub", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -141,10 +141,10 @@ man_pages = [(main_doc, "oe-docs", "Open Ephys Documentation", [author], 1)]
 texinfo_documents = [
     (
         main_doc,
-        "Open Ephys Documentation",
-        "Open Ephys Documentation",
+        "Open Ephys SkillHub",
+        "Open Ephys SkillHub",
         author,
-        "Open Ephys Documentation",
+        "Open Ephys SkillHub",
         "Description",
         "Miscellaneous",
     ),
