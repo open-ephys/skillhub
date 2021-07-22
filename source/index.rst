@@ -15,15 +15,15 @@ Learn how to use Open Source tools for Neuroscience
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
                 <a href=" ">
-                <img src="_static/images/sh_fig-9.png" class="card-img-top" alt="Ephys Fundamentals" height="160">
+                <img src="_static/images/sh_fig-9.png" class="card-img-top" alt="Ephys Basics" height="120">
                 </a>
                 <div class="card-body flex-fill">
 
 .. container:: custom-button
 
-    :ref:`Fundamentals <refindexfundamentals>`
+    :ref:`Electrophysiology Acquisition <refindexbasics>`
 
-Understanding the basics of Electrophysiology Acquisition
+Understanding the fundamentals of Electrophysiology Acquisition
 
 .. raw:: html
 
@@ -32,28 +32,30 @@ Understanding the basics of Electrophysiology Acquisition
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
-                <img src="_static/images/sh_fig-4.png" class="card-img-top" alt="Tutorial Overview" height="160">
+                <img src="_static/images/sh_fig-4.png" class="card-img-top" alt="Tutorial Overview" height="120">
                 <div class="card-body flex-fill">
 
 .. container:: custom-button
 
     :ref:`Tutorials <reftutorial>`
 
-Practical How-To's for using Open Source Tools
+Practical How-To's for using Open Source Tools for Neuroscience 
 
 .. raw:: html
 
                 </div>
                 </div>
             </div>
+          </div>
+          <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
-                <img src="_static/images/sh_fig-5.png" class="card-img-top" alt="Our Electrophysiology course" height="160">
+                <img src="_static/images/sh_fig-5.png" class="card-img-top" alt="Our Electrophysiology course" height="120">
                 <div class="card-body flex-fill">
 
 .. container:: custom-button
 
-    `EEA Course <https://oe-ephys-course.readthedocs.io/en/latest/>`_
+    `Our Extracellular Electrophysiology Course <https://oe-ephys-course.readthedocs.io/en/latest/>`_
 
 .. raw:: html
 
@@ -62,7 +64,7 @@ Practical How-To's for using Open Source Tools
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
-                <img src="_static/images//sh_fig-11.png" class="card-img-top" alt="Contact and Contribute" height="160">
+                <img src="_static/images//sh_fig-11.png" class="card-img-top" alt="Contact and Contribute" height="120">
                 <div class="card-body flex-fill">
 
 .. container:: custom-button
@@ -77,6 +79,7 @@ Ask us questions or contribute ideas
         </div>
       </div>
       </div>
+
 
 .. toctree::
     :hidden:

@@ -3,12 +3,13 @@
 ===================================
 Assembling an OEPS V4.4 Miniscope
 ===================================
+.. image:: ../_static/images/v44_assembly/outline.jpg
 
 Acknowledgements
 *******************************
-http://miniscope.org/ Daniel Aharoni, Federico Sangiuliano and the UCLA Miniscope Team
+Daniel Aharoni, Federico Sangiuliano and the `UCLA Miniscope Team <http://miniscope.org/>`_)
 
-See the Miniscope V4 Wiki for more information
+See the `Miniscope V4 Wiki <https://github.com/Aharoni-Lab/Miniscope-v4/wiki>`_ for more information
 
 Using the Miniscope
 *******************************
@@ -25,10 +26,9 @@ Tools and Materials
 * Padded Vice
 * Epoxy (`Overview by UCLA team here <https://github.com/Aharoni-Lab/Miniscope-v4/wiki/Parts-List#glueepoxy>`_)
 * DAQ and Coax Cable
-* Assembly figure
 
 
-   .. image:: ../_static/images/v44_assembly/mscope_fig-1.png
+.. image:: ../_static/images/v44_assembly/mscope_fig-1.png
 
 1. Prepare
 *******************************
@@ -50,11 +50,11 @@ Tools and Materials
 
    b). Place the objective module directly over the lens and push down. Make sure that you are pushing in a straight line onto the lens, as any angle can cause chipping. Make sure the lens is completely flush with the body and does not stick out.
 
-      .. raw:: html
+    .. raw:: html
 
-       <center><video width="560" height="340" controls>
-          <source src="../_static/videos/objlens01.mp4" type="video/mp4">
-        </video></center>
+     <center><video width="560" height="340" controls>
+        <source src="../_static/videos/objlens01.mp4" type="video/mp4">
+      </video></center>
 
   .. image:: ../_static/images/v44_assembly/mscope_fig-3.png
 
@@ -176,7 +176,7 @@ Tools and Materials
 
       - There are no visible specks on the image.
 
-   b). If the scope passes these tests, you can glue the PCB to the emission module. With the scope held in a vice, apply epoxy using a toothpick and leave to dry.
+   b). If the scope passes these tests, you can glue the PCB to the emission module. With the scope held in a vice, apply 5-min epoxy using a toothpick and leave to dry.
 
    .. raw:: html
 
