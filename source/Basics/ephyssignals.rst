@@ -1,39 +1,68 @@
 .. _refephyssignals:
 
+.. |Ve| replace:: V\ :sub:`e`\
+.. |Ce| replace:: C\ :sub:`e`\
+.. |Rm| replace:: R\ :sub:`m`\
+.. |Re| replace:: R\ :sub:`e`\
+.. |Cs| replace:: C\ :sub:`s`\
+.. |Vin| replace:: V\ :sub:`in`\
+.. |Vec| replace:: V\ :sub:`ec`\
+.. |Vout| replace:: V\ :sub:`out`\
+.. |Na+| replace:: Na\ :sup:`+`\
+.. |K+| replace:: K\ :sup:`+`\
+.. |Ca2+| replace:: Ca\ :sup:`2+`\
+.. |Cl-| replace:: Cl\ :sup:`-`\
+
 ***********************************
 Electrophysiology: Signals
 ***********************************
 
 Electrophysiologists measure biologically generated electrical signals. The source of these signals will depend on the scientific or medical question;  signals can be recorded from various tissues (e.g. the brain, heart, muscles) and different cells (excitatory, inhibitory). Sometimes we are interested in the activity of a single neuron, and sometimes in the combined activity of large populations of cells. See `here <refephysmethods>`_ for an overview of different methods of electrophysiology.
 
-What they have in common is that these signals are measured in Volts: they are therefore measurements of electric potential difference. Changes in electric potential difference are mediated by `charged particles <refchargedparticles>`_, usually ions. These ions can cross cell membranes, both into and out of cells.
+What do they have in common?
 
-Neurons, Ions and Membrane Potential
+1) Unit: Signals are measured in Volts: they are therefore measurements of `electric potential difference <refepot>`_. Changes in electric potential difference are mediated by `charged particles <refchargedparticles>`_, usually ions. These ions can cross cell membranes, both into and out of cells.
+2) Size: Signals are measured in micro or millivolts: they are very small signals, and we need to take this into account when building or choosing acquisition systems.
+
+What are we measuring?
+=====================================
+When we perform extracellular recordings, we are measuring changes in the electric potential difference between the tip of our electrode and a point we have chosen as ground (and therefore 0V). These changes are caused by the current flows and membrane potential changes of cellular activity.
+
+The Membrane Potential
 ***************************************
-Neuronal activity relies mainly on ions such as |Na+|, |K+|, |Ca2+|. Whenever these charges flow, we have a **current**. In neurons, our **resistance** to current flow is formed by the permeability of the cell membrane to our ion, and changed by opening or closing ion channels in the membrane. When more channels open, the resistance to a certain ion is lowered, and the charge is able to flow in or out of the cell.
+Neuronal activity relies mainly on ions such as |Na+|, |K+|, |Ca2+| and |Cl-|. Whenever these charges flow across the cell membrane, we have a **current**. In neurons, our **resistance** to current flow is formed by the permeability of the cell membrane to our ion, which can be changed by opening or closing ion channels in the membrane. When more channels open, the resistance to a certain ion is lowered, and more current able to flow in or out of the cell. For current to flow, the ion must experience a net **driving force** in a certain direction.
 
-The driving force in this scenario is the membrane potential, i.e. the difference in electric potential between the inside of the cell membrane and the extracellular fluid. A neuron typically has a resting membrane potential of around -70 mV compared to the extracellular fluid, if we decide that the extracellular fluid has 0 V.
+What kind of driving forces can cause current flow?
+1. Concentration gradient
+Ions will tend to diffuse away from areas where there is a high concentration of that ion, to areas with a lower concentration.
+2. Electrical force
+Depending on their charge, ions will be attracted to or repelled by other charged particles. Positive charges will move towards areas of more negative `electric potential <refepot>`_. This follows `Ohm's Law <refresistance>`_.
 
-Ions in neurons are influenced by electric forces and a second driving force, namely their concentration gradients. Ions will tend to diffuse away from areas where there is a high concentration of the ion, to areas with a lower concentration. The interaction of the concentration and electrical driving forces is the electrochemical gradient and this balance is described by the Nernst equation, read `Wright 2004 <https://journals.physiology.org/doi/pdf/10.1152/advan.00029.200>`_ for a clear refresher on this, and to understand how the -70mV is maintained by the cell.
+The **membrane potential** is the difference in electric potential between the inside of the cell membrane and the extracellular fluid. A neuron typically has a resting membrane potential of around -70 mV compared to the extracellular fluid (set at 0V).
+
+The interaction of the concentration and electrical driving forces is described in the electrochemical gradient of the ion. This balance is summarised by the Nernst equation. Please read `Wright 2004 <https://journals.physiology.org/doi/pdf/10.1152/advan.00029.200>`_ for a clear refresher on this, and to understand how the -70mV membrane potential is maintained by the cell.
+
+Changes in Membrane Potential
+=====================================
+When ions cross the membrane, the charge distribution across the membrane changes, which can increase or decrease the membrane potential. When positive ions enter the cell, this decreases the electric potential difference over the membrane, *de-polarising* the membrane. Positive ions leaving the cell can *re-polarise* the membrane back to its resting potential.
+Changes in membrane potential happen when the cell receives inputs and when the cell fires an action potential.
 
 Neuronal output: Action Potentials
 =====================================
-When an input signal (a receptor potential or synaptic potential) depolarizes the cell membrane, this change in membrane electric potential can open |Na+| ion channels, greatly reducing membrane resistance to |Na+|. The reduction in membrane resistance to |Na+| depolarises the cell. |Na+| can then follow its concentration and electrical gradient from outside the cell, where the |Na+| concentration is high, to the inside of the cell, where |Na+| concentration is low and the intracellular medium has a lower potential (Kandel, Schwartz, & Jessel, 2000). In neurons, voltage-sensitive |Na+| channels are usually concentrated at the initial segment of the axon, and it is therefore more likely that an action potential will be generated there rather than in other regions of the cell. The subsequent opening of |K+| channels begins the process of returning the membrane potential to resting conditions (Hodgkin and Huxley, 1939).
+When a neurotransmitter binds to a postsynaptic receptor, specific ion channels can open, locally reducing the membrane resistance to that ion and allowing a current to flow. Often, these are |Na+| or |Ca2+| channels. |Na+| can then follow its concentration and electrical gradient from outside the cell, where the |Na+| concentration is high, to the inside of the cell, where |Na+| concentration is low and the intracellular medium has a lower electric potential (Kandel, Schwartz, & Jessel, 2000).
 
-When we perform extracellular recordings, we are measuring the effect of these currents outside of the cell. The extracellular potential Vec at position re, with respect to a point at infinity, can be computed with the following equation (Einevoll et al., 2013; Nunez and Srinivasan, 2006):
+Sufficient depolarisation can open voltage-sensitive |Na+| channels, which trigger further depolarisation and channel opening, causing the membrane potential of the cell to increase rapidly. These membrane potential deflections occur in a stereotypical pattern called the action potential. In neurons, voltage-sensitive |Na+| channels are concentrated at the initial segment of the axon, and it is therefore more likely that an action potential will be generated there rather than in other regions of the cell. The closing of |Na+| channels and opening of |K+| channels begins the process of returning the membrane potential to resting conditions (Hodgkin and Huxley, 1939).
 
-.. image:: ../_static/images/EEA/eea_fig-68.png
-  :align: center
+Action potentials can be detected in the extracellular space. Action potentials usually last on the order of 1-2 ms, and are in the range of tens to hundreds of microvolts in amplitude, with the largest potential deflections being detected close to the soma of a neuron.
+The figure below illustrates how the shape of the action potential depends on the location of the electrode relative to the cell. The left column shows the Ve (voltage at the electrode) at three different locations. As seen from inside the cell, an action potential is always identical. However, seen from outside the cell, the shape of the action potential will vary depending on the location of the electrode. The main peak of the action potential can even be upward or downward.
 
-.. raw:: html
+The shape of the voltage trace depends on the relative strength of three primary currents (Gold et al., 2006):
 
-  <center><i> Equation 4: The point source equation.</i></center>
+1) The capacitive current of |Na+|. The membrane is a capacitor. As the membrane potential decreases, the membrane can separate less charge and |Na+| ions, previously aligned along the membrane, are released. These positive ions flow towards the electrode, causing a positive, upward deflection. (No idea what this means? Read up on `capacitive currents here. <refcapcurrents>`_).
+2) |Na+| current enters the axon. These are positive charges flowing away from the electrode, and appear as a negative deflection, strongest near the axon initial segment where the concentration of voltage-dependent |Na+| channels is highest.
+3) The repolarizing |K+| current flowing out of the cell.
 
-Conceptually, this point-source equation (Equation 4) is key for computing the extracellular potential in response to any transmembrane current (Buzsaki et al., 2012). In(t) represents the nth point current source and re – rn  represents the distance between the point source and the position of measurement, with n = 1...N, where N is the number of individual point sources and ρ is the extracellular conductivity. If the extracellular medium is considered homogeneous and isotropic, we can use a constant conductivity value (Einevoll et al., 2013).
-
-|
-
-.. image:: ../_static/images/EEA/eea_fig-4.png
+.. image:: ../_static/images/sh_fig-42.png
   :align: center
 
 .. raw:: html
@@ -42,12 +71,11 @@ Conceptually, this point-source equation (Equation 4) is key for computing the e
     <p style="font-size:12px">  Electric potential generated by current sources in a conductive volume. The extracellular potentials and currents are adapted from Gold et al., 2006. The shape of the extracellular potential waveforms at various spatial positions 're' (marked with black dots) are simulated for a CA1 pyramidal neuron.
     Currents: simulated net membrane current (first column) across the soma and proximal dendrites that best estimates the extracellular potential waveform and membrane current components in terms of Na+, K+ and capacitive currents (second column). In the soma, the positive capacitive current coincides with the larger Na+ current. At locations along the apical trunk, the initial capacitive peak becomes visible. In dendritic compartments the membrane depolarization is initially driven by Na+ current from the soma, until local Na+ currents are activated and the action potential regenerates. In the brief time before the local Na+ currents activate, the positive capacitive current is the dominant membrane current and a capacitive-dominant phase is visible in the net current (Gold et al., 2006).</p></h5></center>
 
-To detect the presence of an active neuron nearby in the extracellular space, the electric potential relative to some distant reference point must be measured. The model presented in Fig 4 illustrates how the electric potential varies nearby an active neuron. The extracellular potential waveforms usually last on the order of 1-2 ms, and are in the range of tens to hundreds of microvolts in amplitude, with the largest potential deflections being detected close to the soma of a neuron. These stereotypical temporal deflection of the electric potential in the extracellular space are called action potentials or spikes.
-Fig 4 depicts the time-varying extracellular potential at given locations (|Re|) that resulted from the superposition of the ionic and capacitive transmembrane currents formed when a neuron was active. The difference in potential waveforms at different locations in the extracellular medium is mainly given by the shape of the net current (Fig 4, left column) across the membrane. Furthermore, the peaks in the potential waveforms correspond to the current (Fig 4, right column) that is dominant at that time-point: the first positive peak of the waveform is attributed to the positive capacitive current resulting from the strong |Na+|  current entering the axon initial segment; the main negative peak is attributed to the influx of |Na+|; and finally, the second positive peak results from repolarizing |K+| current flowing out of the cell (Gold et al., 2006).
 
 Neuronal input: Postsynaptic potentials
 ============================================
-Slower frequencies in extracellular recordings are the focus of the LFP or EEG. These are thought to be largely generated by postsynaptic potentials, as these occur over slower timescales (10s of ms) than the action potential (1-2 ms), so there is more opportunity for signals from multiple cells to summate and result in larger signals. When activated, AMPA and NMDA synapses mediate excitatory currents as |Na+| and |Ca2+| enter the cell. In our extracellular recordings, the direction of a deflection caused by an excitatory current (whether it is positive or negative) will depend on where the electrode is relative to the neuron.
+When synapses are activated, the opening of channels can cause a local change in membrane potential: the postsynaptic potential. Just like action potentials, postsynsaptic potentials can be picked up by an extracellular electrode. These are slower than the action potential, occurring over 10s of milliseconds rather than the 1-2 ms of the action potential. Because postsynaptic potentials last longer, there is more opportunity for signals from multiple cells to summate and result in larger signals, such as those measured with EEG.
+If using an extracellular electrode, the signal can be filtered to either focus on high-frequency action potentials or lower-frequency summed synaptic inputs.
 
 The extracellular space
 ============================================

@@ -14,12 +14,7 @@ Electronics Refresher
 ***********************************
 This is a brief overview of some of the physics concepts you will need in order to understand the basics of electrophysiology.
 
-.. contents:: Table of contents
-
-
-.. toctree::
-  :maxdepth: 2
-
+.. _refchargedparticles:
 
 Charged particles exert electric force
 #######################################
@@ -178,7 +173,13 @@ This is a very important concept in electrophysiology. We intentionally build vo
       <p> Click on the image of the voltage divider to open a simulated voltage divider. Build your own voltage divider circuit in which you use a 3V battery and two resistors to provide an 800 mV output voltage.</p>
     </div>
 
-As capacitors also impede current flow and cause voltage drops, you could also  build a :ref:`capacitive voltage divider.<refcapvoltdiv>`
+As capacitors also impede current flow and cause voltage drops, you could also  build a capacitive voltage divider.
+
+.. image:: ../../_static/images/sh_fig-35.png
+  :align: center
+  :target: https://tinyurl.com/y5kq7yct
+
+.. _refcapacitors:
 
 Capacitors
 ###################################
@@ -187,7 +188,38 @@ Capacitors
 
 Capacitors, direct current
 ***********************************
-Capacitors are formed any time we have two conducting plates, separated by an insulating material that prevents the plates from touching. We can build capacitors on purpose out of metal plates, but we also encounter many Charges cannot jump through the insulating layer. Instead, charges collect on one plate, forming an electric field that pushes away similar charges on the opposite plate. This movement of charge is what gives us current flow in the circuit, even though charges cannot flow directly through the capacitor.
+In conductive materials, charged particles (ions or electrons) are free to move. This can be, for instance, a metal or a solution containing ions.
+
+.. image:: ../../_static/images/sh_fig-36.png
+  :align: center
+
+We can separate this solution into two by introducing a thin non-conducting layer. The ions can still move around, but they cannot cross the layer to the other side. **This is already a capacitor.**
+
+.. image:: ../../_static/images/sh_fig-37.png
+  :align: center
+
+What happens when we add some electrical driving force, like a positive charge on one side? Negative ions will be attracted to it, and positive ions will be repelled. Though they cannot cross the barrier layer we created, the electric forces still influence each other through that thin layer. Ions become **separated** into positive and negative areas.
+
+.. image:: ../../_static/images/sh_fig-38.png
+  :align: center
+
+If we increase the size of the positive charge on the right, our ions will experience increased attraction; now we see maximum charge separation, with no more free ions that can move around and create a current.
+
+.. image:: ../../_static/images/sh_fig-39.png
+  :align: center
+
+In the real world, we can't just buy a single +10 charge to influence our capacitors. What we can do, is induce an :ref:`electric potential difference<refepot>`, and put one chamber at a more negative potential than the other. The positive ions will move towards that lower potential, inducing the same separation of charge. The larger the potential difference, the more of the available charge is separated, until all charge is at an optimal organisation, balanced between surrounding charges it is attracted to and repelled by. This is what a capacitor can do; it can separate charges when it has a potential difference across its two sides. We sometimes say that a capacitor 'stores' charge.
+
+.. image:: ../../_static/images/sh_fig-40.png
+  :align: center
+
+The **capacitance** is the amount of charge that a capacitor can separate. We can separate more charge by having a thinner separating layer. Electric force decreases over distance, so a thinner layer allows charges to have a larger influence on each other. The larger the surface area of the layer, the more ions can be physically separated. The formula for capacitance is therefore:
+
+.. math::
+
+  C = \epsilon 0 \frac{A}{d}
+
+Where C = capacitance, :math:`\epsilon 0` = conductivity of the separating layer, A is the area of the separating layer, and d is the distance between the conductive materials.
 
 .. math::
 
@@ -209,19 +241,33 @@ In this simulation, you can charge and discharge a capacitor and see the current
       <p> Modify the simulation to power an LED (Draw/Outputs and Labels/Add LED) by the capacitor as it discharges. The simulator will turn the LED red when it is on.</p>
     </div>
 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Notes on understanding capacitors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. 'Real' capacitors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We can build capacitors on purpose out of metal plates, separated by a thin layer of non-conducting materials. We also encounter many situations in which capacitors are formed because two non-conducting materials are separated by a thin non-conducting layer, such as cell membranes that separate conductive fluid, or when a glass pipette is lowered into the brain (the extracellular fluid and the solution inside the pipette are both conductive, the glass of the pipette is not). We often hear people say that these examples 'act like capacitors' but it is important to remember that these configurations *are* real capacitors. A charged particle cannot distinguish between a cell membrane or a purpose-built capacitor component on a breadboard. We use this fact to our advantage when we build equivalent circuits.
+
+.. _refcapcurrents:
+2. Capacitive currents
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In circuits such as `this one <https://www.falstad.com/circuit/e-cap.html>`_ you can see that when we change the potential difference across the capacitor (for instance by connecting it to or disconnecting it from a battery) you will see current flowing through the capacitor. How is that possible, when we know that charges can't cross the insulating layer?
+Indeed, charges cannot flow directly through the capacitor. Instead, a change in potential difference changes the amount of charge that the capacitor can separate (because :math:`Q = C*V`) If we increase the electric potential difference, more positive charges will collect on one plate of the capacitor. They form an electric field that pushes away similar charges on the opposite plate. When these are initially pushed away, that movement of charge gives us current flow in the circuit. You can see in the simulator that current quickly stop flowing again, once the capacitor has either increased or decreased the amount of charge it has separated.
+This same phenomenon causes capacitive currents in the neuron. When the electric potential difference across the cell membrane decreases during a depolarization, the membrane can store less charge, and the previously separated charges are released and can flow as a current, which can be picked up by an electrode.
+
 Capacitors, alternating signal
 ********************************************
-The action potentials and LFPs we measure from neurons can go in both directions- they are alternating currents (AC). An alternating signal will change direction at a certain frequency, and that frequency can vary. Action potentials cause very fast changes in current (and potential), whereas synaptic inputs and their sums are much slower. The power supply in your building will alternate at 50 or 60Hz. We have to make sure the frequencies we are interested in can travel through our recording circuit.
+The action potentials and LFPs we measure from neurons can go in both directions- they are alternating signals. An alternating signal will vary in amplitude and change direction at a certain frequency, and that frequency can vary. Action potentials cause very fast (1kHz) changes in electric potential difference, whereas synaptic inputs and their sums are much slower. The power supply in your building will alternate at 50 or 60Hz.
 
-Here is a demo where an alternating signal increases and decreases in frequency. At the bottom of the page, you can see the wave visualised.
+The charge that can be separated by a capacitor is dependent on the electric potential difference across the capacitor. When we apply an alternating signal to a capacitor, we are constantly increasing and then decreasing that electric potential, and therefore changing how much charge can be separated.
+When we were only dealing with resistors, changes in our circuit happened instantly. Introducing a capacitor into our circuit means that we have to take time into account, as it takes time for the capacitor to charge and discharge, to adjust to the ongoing changes in electric potential. Resistors are not sensitive to changes in frequency, but capacitors are. If we want to measure a very high frequency, we have to make sure that the capacitors in our circuits can keep up. Here is a demo where an alternating signal increases and decreases in frequency.
 
 Press ‘Play Audio’ to hear how the sound is modulated as the frequency increases.
 
 .. image:: ../../_static/images/sh_fig-33.png
   :align: center
   :target: https://tinyurl.com/yyrvugha
-
-When we were only dealing with resistors, changes in our circuit happened instantly. Introducing a capacitor into our circuit means that we have to take time into account, as it takes time for the capacitor to charge and discharge. Resistors are not sensitive to changes in frequency, but capacitors are.
 
 .. image:: ../../_static/images/sh_fig-34.png
   :align: center
@@ -267,7 +313,7 @@ In contrast, for a capacitor the current is 90° out of phase with the voltage, 
 
   Zc = \frac{1}{2 \pi fC}
 
-So the magnitude of impedance of a capacitor will decrease with increasing frequency. The larger the capacitance C, the lower the impedance at a specific frequency.
+The magnitude of impedance of a capacitor will decrease with increasing frequency. The larger the capacitance C, the lower the impedance at a specific frequency. In electrophysiology, we are often interested in the impedance of capacitors at 1kHz, because that is the frequency at which spikes occur.
 
 .. raw:: html
 

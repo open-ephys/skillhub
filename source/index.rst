@@ -1,12 +1,14 @@
+.. toctree::
+  :hidden:
+
+  indexbasics.rst
+  /Contact/disclaimer_terms_conditions.rst
+
 .. raw:: html
 
     <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mx-auto" style = "max-width: 60%">
         <img src="_static/images/sh_fig-10.png">
     </div>
-
-*****************************************************
-Learn how to use Open Source tools for Neuroscience
-*****************************************************
 
 .. raw:: html
 
@@ -14,7 +16,7 @@ Learn how to use Open Source tools for Neuroscience
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card text-center intro-card shadow">
-                <a href=" ">
+                <a href="/refindexbasics/html">
                 <img src="_static/images/sh_fig-9.png" class="card-img-top" alt="Ephys Basics" height="120">
                 </a>
                 <div class="card-body flex-fill">
@@ -39,7 +41,7 @@ Understanding the fundamentals of Electrophysiology Acquisition
 
     :ref:`Tutorials <reftutorial>`
 
-Practical How-To's for using Open Source Tools for Neuroscience 
+Practical How-To's for using Open Source Tools for Neuroscience
 
 .. raw:: html
 
@@ -79,11 +81,3 @@ Ask us questions or contribute ideas
         </div>
       </div>
       </div>
-
-
-.. toctree::
-    :hidden:
-
-    Tutorials/index
-    Fundamentals/index
-    Contact/index
