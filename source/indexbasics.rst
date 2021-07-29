@@ -42,7 +42,7 @@ Below are the major components of an electrophysiology acquisition system (click
           </a>
         </div>
         <div class="content_img">
-        <a href="Basics/acboards.html">
+        <a href="Basics/acboard.html">
            <img src='_static/images/interactive-4.png'>
            <div>
            <img src='_static/images/interactive-10.png'>
@@ -58,7 +58,7 @@ Below are the major components of an electrophysiology acquisition system (click
           </a>
         </div>
         <div class="content_img">
-        <a href="Basics/software.html">
+        <a href="Basics/io.html">
         <img src='_static/images/interactive-6.png'>
           <div>
           <img src='_static/images/interactive-12.png'>

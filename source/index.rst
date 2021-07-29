@@ -10,6 +10,10 @@
         <img src="_static/images/sh_fig-10.png">
     </div>
 
+************************************
+SkillHub
+************************************
+
 .. raw:: html
 
     <div class="container">
