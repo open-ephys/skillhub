@@ -5,7 +5,7 @@ Tutorials
 ***********************************
 
 .. toctree::
-   :maxdepth: 2
+  :maxdepth: 1
 
-   assembleminiscope
-   
+  Channel_Mapping.rst
+  Miniscope_Assembly.rst
