@@ -42,7 +42,8 @@ release = "0.0.0"
 # ones.
 extensions = [
     "sphinx.ext.todo",
-    "sphinx.ext.githubpages"]
+    "sphinx.ext.githubpages",
+    "sphinx.ext.autosectionlabel"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -78,7 +79,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-#html_logo = "_static/images/oe_logo_circle.svg"
+html_logo = "_static/images/homepage/oe_logo_name.svg"
 html_scaled_image_link = True
 
 

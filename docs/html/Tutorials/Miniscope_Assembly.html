@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Assembling an OEPS V4.4 Miniscope &#8212; SkillHub 0.0.0 documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using the OE Acquisition Board for EEG" href="Using%20OE%20Acquisition%20Board%20for%20EEG.html" />
+    <link rel="prev" title="Mapping Channels" href="Channel_Mapping.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/oe_logo_name.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../Basics/index.html">
+  Electrophysiology Acquisition
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../Contact/disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ahleighton/skillhub" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/acboard.html">
+   Acquisition Boards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/amplifiers.html">
+   Amplifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/connectors.html">
+   Connectors and Cables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/electrodes.html">
+   Electrodes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/electronicsrefresher.html">
+   Electronics Refresher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/ephysmethods.html">
+   Different Electrophysiology Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/ephyssignals.html">
+   Electrophysiology: Signals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/filtering.html">
+   Filtering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/goldplating.html">
+   Reducing electrode impedance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/groundvsreference.html">
+   Ground vs Reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/headstage.html">
+   Headstages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/howcellisnegative.html">
+   Resting Membrane Potential
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/impedance.html">
+   Impedance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/intanpinout.html">
+   Intan Pinout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/io.html">
+   Inputs/Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/sync.html">
+   What is synchronization?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/tetrodeintro.html">
+   Tetrodes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Channel_Mapping.html">
+   Mapping Channels
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Assembling an OEPS V4.4 Miniscope
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Using%20OE%20Acquisition%20Board%20for%20EEG.html">
+   Using the OE Acquisition Board for EEG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="edit_our_docs.html">
+   How to edit Open Ephys Docs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Tutorials
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-and-materials">
+   Tools and Materials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare">
+   1. Prepare
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective-module">
+   2. Objective Module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#excitation-module">
+   3. Excitation Module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#emission-module">
+   4. Emission Module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assembly">
+   5. Assembly
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-before-securing">
+   6. Test before securing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting-assembly">
+   Troubleshooting Assembly
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-i-change-the-focus-setting-the-image-does-not-change">
+     1) When I change the focus setting, the image does not change.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#there-are-marks-on-my-image">
+     2) There are marks on my image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#my-scope-looked-clean-but-now-i-see-dark-in-focus-marks-hairs">
+     3) My scope looked clean, but now I see dark, in-focus marks/hairs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-miniscope">
+   Using the Miniscope
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electrostatic-and-mechanical-damage">
+     Electrostatic and mechanical damage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#led-intensity">
+     LED intensity
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#licensing">
+       Licensing
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="assembling-an-oeps-v4-4-miniscope">
+<span id="refminiscopeassembly"></span><h1>Assembling an OEPS V4.4 Miniscope<a class="headerlink" href="#assembling-an-oeps-v4-4-miniscope" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_static/images/v44_assembly/outline.jpg"><img alt="_static/images/v44_assembly/outline.jpg" src="_static/images/v44_assembly/outline.jpg" /></a>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="http://miniscope.org/">UCLA Miniscope</a> is an ongoing open-source project from Daniel Aharoni’s lab. See the <a class="reference external" href="https://github.com/Aharoni-Lab/Miniscope-v4/wiki">Miniscope V4 Wiki</a> for more information about this project.</p>
+<p>This assembly guide is specific to the OEPS V4.4 Miniscope and is provided on an “as-is” basis, you are always responsible for your own decisions regarding experiments. Please contact <a class="reference external" href="mailto:support&#37;&#52;&#48;oeps&#46;tech">support<span>&#64;</span>oeps<span>&#46;</span>tech</a> for questions about this guide or the OEPS product.</p>
+</section>
+<section id="tools-and-materials">
+<h2>Tools and Materials<a class="headerlink" href="#tools-and-materials" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>ESD gloves (to safely handle the PCB and keep lenses and filters clean)</p></li>
+<li><p>Soft cloth (e.g. cloth to clean eyeglasses with)</p></li>
+<li><p>Tweezers/forceps</p></li>
+<li><p>Torx T2 screwdriver</p></li>
+<li><p>Compressed air spray</p></li>
+<li><p>Scalpel/Biopsy punch</p></li>
+<li><p>Padded Vice</p></li>
+<li><p>Epoxy (<a class="reference external" href="https://github.com/Aharoni-Lab/Miniscope-v4/wiki/Parts-List#glueepoxy">Overview by UCLA team here</a>)</p></li>
+<li><p>DAQ and Coax Cable</p></li>
+</ul>
+<img alt="_static/images/v44_assembly/mscope_fig-1.png" src="_static/images/v44_assembly/mscope_fig-1.png" />
+</section>
+<section id="prepare">
+<h2>1. Prepare<a class="headerlink" href="#prepare" title="Permalink to this headline">¶</a></h2>
+<p>a). Check all parts for any Delrin burrs sticking out. Scrape them off with a biopsy punch or tweezers.</p>
+<img alt="_static/images/v44_assembly/mscope_fig-2.png" src="_static/images/v44_assembly/mscope_fig-2.png" />
+</section>
+<section id="objective-module">
+<h2>2. Objective Module<a class="headerlink" href="#objective-module" title="Permalink to this headline">¶</a></h2>
+<p>a). Stand one of the 3x6 mm lenses on a flat surface. Make sure the lens is standing on its flat side- it should not wobble.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/testobjectivelens.mp4" type="video/mp4">
+</video></center><p>b). Place the objective module directly over the lens and push down. Make sure that you are pushing in a straight line onto the lens, as any angle can cause chipping. You may have to use some force to do this, if the objective module is a bit tight (you can hear in the video that it makes a sound). Downward force is ok <em>as long as the lens and objective module are completely aligned</em>. If you see the lens stick out at an angle, remove it and reposition it.</p>
+<p>Make sure the lens is completely flush with the body and does not stick out.</p>
+<img alt="_static/images/v44_assembly/mscope_fig-9.png" src="_static/images/v44_assembly/mscope_fig-9.png" />
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/objlens01.mp4" type="video/mp4">
+</video></center><p>c). Once the lens is flush with the edge of the objective module, clean the edge of the lens with a soft cloth.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Important: sometimes extra burrs come off due to the first lens. If they are not removed before inserting the second lens, they can become trapped between the two, which interferes with your image and is difficult to remove. To prevent this problem, inspect the module for small Delrin burrs once more. If they are already loose, you can tap the module gently to allow them to fall out. Otherwise, you can scrape them off using forceps. Be careful not to scratch the lens.</p>
+</div>
+<img alt="_static/images/v44_assembly/mscope_fig-3.png" class="align-center" src="_static/images/v44_assembly/mscope_fig-3.png" />
+<p>d). Then, repeat this with the second 3x6 mm lens, again making sure that the lens is standing on its flat edge. Push the objective module down until the second lens is flush with the edge of the objective module.</p>
+</section>
+<section id="excitation-module">
+<h2>3. Excitation Module<a class="headerlink" href="#excitation-module" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Take great care not to scratch the filter, this will damage the coat that actually performs the filtering and will allow aberrant wavelengths to pass through the filter.</p>
+</div>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/exfilter.mp4" type="video/mp4">
+</video></center><p>a). Locate the arrow on your 470nm excitation filter. This arrow must point towards the light source, in this case towards the LED on the Miniscope PCB.</p>
+<p>b). Press the filter, arrow pointing down, into the excitation module. If it does not fit easily, use a scalpel or biopsy punch to scrape out a small layer of the inner edges of the Delrin on the excitation module to allow the filter to click in.</p>
+</section>
+<section id="emission-module">
+<h2>4. Emission Module<a class="headerlink" href="#emission-module" title="Permalink to this headline">¶</a></h2>
+<p>a). First, screw a self-threading screw into the hole on the side of the body, then remove the screw again. This is so that you can remove any small burrs that are generated by the self-threading screw, while the body is still unassembled and therefore easier to clean. Hold the emission module up-side down and tap to get these burrs out of the body. You can spray compressed air through the module to make sure it is clean.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/screwinout.mp4" type="video/mp4">
+</video></center><p>b). Find your 4mm, 10mm lens. This one has only a very slight curve at one edge, and should be placed with the curved edge down (in contrast to the objective module lenses). Stand the lens on a flat surface, with the curved edge down. If you press it, it should wobble.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/4mmlens_orientation.mp4" type="video/mp4">
+</video></center><p>c). Press the emission module down on top of this lens.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/lensinemission.mp4" type="video/mp4">
+</video></center><p>d). Once it is secure, you can turn the module upside down and, using a cloth on top of the lens, press to ensure the lens is as flush with the module as possible.</p>
+<p>e). Next, place the dichroic filter in the slot on the side of the emission module. The arrow must be facing downwards, towards the 4mm lens.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/dichroic.mp4" type="video/mp4">
+</video></center><p>f). Look through the top of the module to check that there are no burrs or pieces of visible dust in the scope so far.</p>
+<p>g). If it looks clean, place the half-ball lens in the round pocket on the side of the body. Secure it in place by attaching the excitation module using two screws.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/halfball.mp4" type="video/mp4">
+</video></center></section>
+<section id="assembly">
+<h2>5. Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">¶</a></h2>
+<p>a). Cut the extra tabs from the electrowettinglens PCB.</p>
+<img alt="_static/images/v44_assembly/mscope_fig-5.png" src="_static/images/v44_assembly/mscope_fig-5.png" />
+<p>b). Screw the PCB to the excitation module using the two holes.</p>
+<img alt="_static/images/v44_assembly/mscope_fig-6.png" src="_static/images/v44_assembly/mscope_fig-6.png" />
+<p>c). Carefully pre-bend the two circles in the PCB (do not press too hard, just gently shape them).</p>
+<p>d). You can now put an EWL in between these circles and attach the objective module to the emission module. Check that the EWL is in the correct orientation.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/ewllens.mp4" type="video/mp4">
+</video></center><p>e). Finally, use compressed air to clean out the sides of the pocket at the top of the scope. Make sure it is very clean, as any pieces that come loose here later on, will fall directly on your sensor and interfere with your imaging. Place the 525 nm filter in the pocket, with the arrow pointing down.</p>
+<p>f). Remove the protective film from the PCB and close the sensor over the top of the scope. You will probably have to hold the PCB in place while you do a first test of the scope.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/peel.mp4" type="video/mp4">
+</video></center>
+
+
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/closescope.mp4" type="video/mp4">
+</video></center></section>
+<section id="test-before-securing">
+<h2>6. Test before securing<a class="headerlink" href="#test-before-securing" title="Permalink to this headline">¶</a></h2>
+<p>a). Connect your Miniscope to a computer using a DAQ and a coaxial cable. Check that:</p>
+<ul class="simple">
+<li><p>The EWL allows you to focus electronically.</p></li>
+<li><p>The LED responds to you increasing/decreasing the value.</p></li>
+<li><p>There are no visible specks on the image. It is worth moving the scope around a little to make sure there are no debris in the corners of the 525 pocket that can fall into view.</p></li>
+</ul>
+<p>b). If the scope passes these tests, you can glue the PCB to the emission module. With the scope held in a vice, apply 5-min epoxy using a toothpick and leave to dry.</p>
+<center><video width="560" height="340" controls>
+<source src="../_static/videos/glue.mp4" type="video/mp4">
+</video></center><p>c). Once the epoxy is fully dry, screw in the PCB flaps.</p>
+<p>Test the scope one final time, and you are ready to image!</p>
+</section>
+<section id="troubleshooting-assembly">
+<h2>Troubleshooting Assembly<a class="headerlink" href="#troubleshooting-assembly" title="Permalink to this headline">¶</a></h2>
+<section id="when-i-change-the-focus-setting-the-image-does-not-change">
+<h3>1) When I change the focus setting, the image does not change.<a class="headerlink" href="#when-i-change-the-focus-setting-the-image-does-not-change" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>This is almost always due to the PCB being incorrectly placed around the electrowetting lens and therefore not making full contact. Take a look at your objective module- do the screws need tightening so that the PCB and the lens are pushed closer together? Can you see any PCB stick out at the side? The circles of the PCB must fit neatly inside the objective module and touch the electrowetting lens.</p>
+</div></blockquote>
+</section>
+<section id="there-are-marks-on-my-image">
+<h3>2) There are marks on my image<a class="headerlink" href="#there-are-marks-on-my-image" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Dust and other debris can make their way into the scope at various positions. If the mark on your image is in focus, it is most likely a mark on the CMOS sensor of the PCB or the 525 filter. Clean both with a soft optics-safe cloth and test the image again.
+If the mark is large, see-through and out-of-focus, it could be dust on the lenses or the 495 dichroic. You will have to disassemble the scope to find the culprit, using compressed air to clean out places that are difficult to access.
+You want the center of your image to be very clean, however some dust/dirt can be inevitable, and users often reach a point where cleaning the scope more just introduces new marks. As long as marks are small and not in the center of the image, they should not greatly affect your imaging, but this depends on the application and is up to you to decide.</p>
+</div></blockquote>
+</section>
+<section id="my-scope-looked-clean-but-now-i-see-dark-in-focus-marks-hairs">
+<h3>3) My scope looked clean, but now I see dark, in-focus marks/hairs<a class="headerlink" href="#my-scope-looked-clean-but-now-i-see-dark-in-focus-marks-hairs" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>These are often Delrin burrs that have come loose in the 525 pocket. The only solution is to unscrew the PCB flaps and remove the epoxy so that you can clean the sensor again. The easiest way to remove the epoxy is to very gently twist the Miniscope relative to the PCB to loosen the epoxy, the PCB should come loose. You can then remove the remaining epoxy with forceps so that you are free to reattach the PCB after cleaning.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="using-the-miniscope">
+<h2>Using the Miniscope<a class="headerlink" href="#using-the-miniscope" title="Permalink to this headline">¶</a></h2>
+<section id="electrostatic-and-mechanical-damage">
+<h3>Electrostatic and mechanical damage<a class="headerlink" href="#electrostatic-and-mechanical-damage" title="Permalink to this headline">¶</a></h3>
+<p>When assembling and using the Miniscope, please take care with the printed circuit board (PCB). The circuitry is exposed on the outside of the scope and can be damaged by electrostatic charges. Prevent this damage by never placing the scope on metal or other conductive surfaces and wearing electrostatic-safe gloves if possible.</p>
+<p>Make sure that the scope is not physically bumped during experiments; this may lead to damage or very brief power losses in the scope, during which the electrowettinglens can reset to 0, losing your plane of focus.</p>
+</section>
+<section id="led-intensity">
+<h3>LED intensity<a class="headerlink" href="#led-intensity" title="Permalink to this headline">¶</a></h3>
+<p>We see a lot of people using very high LED intensities during their experiments. Different versions of the Miniscope use different LED intensities/sensor sensitivities, so the % power setting that worked for you before may not be the most appropriate choice now. Always measure the light output of your Miniscope so that you know how much light you are sending to the brain, and take care not to bleach your sensor or saturate your signals.</p>
+<section id="licensing">
+<h4>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h4>
+<p>This work is licensed under CC BY-SA 4.0.</p>
+<p>To view a copy of this license, visit <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></p>
+</section>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Channel_Mapping.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mapping Channels</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Using%20OE%20Acquisition%20Board%20for%20EEG.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Using the OE Acquisition Board for EEG</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020-2022, Open Ephys &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

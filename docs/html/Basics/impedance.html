@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Impedance &#8212; SkillHub 0.0.0 documentation</title>
+    
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+    
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Intan Pinout" href="intanpinout.html" />
+    <link rel="prev" title="Resting Membrane Potential" href="howcellisnegative.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/oe_logo_name.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Electrophysiology Acquisition
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../Tutorials/index.html">
+  Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../Contact/disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ahleighton/skillhub" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="acboard.html">
+   Acquisition Boards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="amplifiers.html">
+   Amplifiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="connectors.html">
+   Connectors and Cables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="electrodes.html">
+   Electrodes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="electronicsrefresher.html">
+   Electronics Refresher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ephysmethods.html">
+   Different Electrophysiology Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ephyssignals.html">
+   Electrophysiology: Signals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="filtering.html">
+   Filtering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="goldplating.html">
+   Reducing electrode impedance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="groundvsreference.html">
+   Ground vs Reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="headstage.html">
+   Headstages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="howcellisnegative.html">
+   Resting Membrane Potential
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Impedance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intanpinout.html">
+   Intan Pinout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="io.html">
+   Inputs/Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sync.html">
+   What is synchronization?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tetrodeintro.html">
+   Tetrodes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tutorials/Channel_Mapping.html">
+   Mapping Channels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tutorials/Miniscope_Assembly.html">
+   Assembling an OEPS V4.4 Miniscope
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tutorials/Using%20OE%20Acquisition%20Board%20for%20EEG.html">
+   Using the OE Acquisition Board for EEG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tutorials/edit_our_docs.html">
+   How to edit Open Ephys Docs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tutorials/index.html">
+   Tutorials
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <span class="target" id="refimpedance"></span><section id="impedance">
+<h1>Impedance<a class="headerlink" href="#impedance" title="Permalink to this headline">¶</a></h1>
+<p>This is a brief overview that will focus on how impedance measurements relate to electrophysiology recordings.</p>
+<section id="joana-neto-introduces-impedance">
+<h2>Joana Neto introduces Impedance<a class="headerlink" href="#joana-neto-introduces-impedance" title="Permalink to this headline">¶</a></h2>
+<center><iframe width="560" height="340" src="https://www.youtube.com/embed/fVloDI4b1ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<br></section>
+<section id="what-is-impedance">
+<h2>What is impedance<a class="headerlink" href="#what-is-impedance" title="Permalink to this headline">¶</a></h2>
+<p>Resistance (measured in Ohms) tells us how much opposition there is to current flow, when that current is flowing in one consistent direction. However, our mains power supplies and our neurons have <em>alternating signals</em> where current flow changes direction at certain frequencies. In the mains power supply this is usually at 50 or 60hz, depending on the country you live in. In our neurons, this alternating current is generated because our positive and negative ions can cross the lipid bilayer both into and out of the cell. Sometimes you will have a net positive current coming towards your electrode, and sometimes the positive ions will be moving away from your electrode. To measure the opposition to current flow in these situations, we use Impedance (Z) instead of resistance.</p>
+<p>If we apply an alternating voltage to a resistor, capacitor or circuit, and measure the current flow, we can determine the impedance Z, measured in Ohms. The impedance Z is specific to a certain frequency and represents opposition to current flow at that frequency, allowing us to describe the relationship between voltage and current for time-varying signals. The impedance Z can be computed as:</p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{V(t)}{I(t)}\]</div>
+<p>So why can’t we just keep using resistance as a measurement? First, because resistance only has magnitude. Impedance is a vector value, which has both magnitude and phase (θ). Impedance provides the magnitude and phase relationship between V and I and can be measured over a broad frequency range (from 1 Hz to 10 kHz). Let’s examine the response of resistors and capacitors to an applied sinusoidal voltage (an alternating signal).</p>
+<section id="resistors">
+<h3>Resistors<a class="headerlink" href="#resistors" title="Permalink to this headline">¶</a></h3>
+<p>For resistors, the impedance magnitude (Z) is constant and does not vary with the frequency of signal applied. The impedance follows Ohm’s Law (V = IR), which doesn’t take the frequency of the signal into account. This is why we usually talk about resistance rather than impedance when we’re dealing with resistors, because we don’t need the frequency/phase component.</p>
+</section>
+<section id="capacitors">
+<h3>Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">¶</a></h3>
+<p>In contrast, when we apply an alternating signal to a capacitor, we see that the current is 90° out of phase with the voltage. To be able to accurately convey what the capacitor does to the circuit, we need a value to describe this phase difference.
+Secondly, and this is very crucial for electrophysiology, the magnitude of capacitor impedance <em>decreases</em> as the frequency of the signal <em>increases</em>. We can therefore only describe the impedance of a capacitor at a certain frequency, as:</p>
+<div class="math notranslate nohighlight">
+\[Zc = \frac{1}{2 \pi fC}\]</div>
+<p>The larger the capacitance C of the capacitor, the lower the impedance at a specific frequency.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you want to play around with this idea before moving on, try plotting the relationship between impedance and frequency for a capacitor with C = 2. Then plot the same line for C = 20. What is the difference? Remember that we are interested in signals that last 1 ms, so are around 1kHz.</p>
+</div>
+</section>
+</section>
+<section id="why-is-impedance-important">
+<span id="refwhyimpedance"></span><h2>Why is impedance important?<a class="headerlink" href="#why-is-impedance-important" title="Permalink to this headline">¶</a></h2>
+<p>Essentially, impedance is important because all parts of our acquisition system resist current flow, and therefore provide impedance. Depending on the relative sizes of these impedances, we can either protect or precious neuronal signal, or lose all of it to ground. Additionally, there are certain frequencies that are particularly important in our electrophysiology signal, depending on what you are measuring. We have to make sure that our acquisition system has appropriate impedance <em>at the frequency we are interested in</em>, so that these signals are passed through the system.</p>
+<p>If we look at the equivalent circuit of the electrode, we can see that the signals coming from our neurons can be lost to ground by passing through the electrode circuit and the shunt capacitance (C<sub>sh</sub>), causing a difference between the voltage picked up at the electrode (V<sub>ec</sub>) and the voltage that reaches the acquisition system (V<sub>in</sub>).</p>
+<img alt="_static/images/EEA/eea_fig-9.png" class="align-center" src="_static/images/EEA/eea_fig-9.png" />
+<p>We can simplify the resistors and capacitors in the circuit with a representation of the impedance (Z) they provide.</p>
+<img alt="_static/images/EEA/eea_fig-27.png" class="align-center" src="_static/images/EEA/eea_fig-27.png" />
+<p>This gives us a :ref: Voltage Divider , where:</p>
+<div class="math notranslate nohighlight">
+\[Vin = \frac{ZCs}{ZCs+Ze} Vec\]</div>
+<p>Therefore, the ratio of impedance between the electrode and shunt capacitance determines how much of our electrode tip voltage reaches the rest of the recording system.</p>
+<p>To get more of our voltage V<sub>e</sub> into our recording system, we can adjust this ratio by either:</p>
+<ol class="arabic simple">
+<li><p>Reducing the electrode impedance Z<sub>e</sub></p></li>
+<li><p>Increasing the shunt impedance Z C<sub>sh</sub></p></li>
+</ol>
+<section id="electrode-impedance">
+<h3>Electrode Impedance<a class="headerlink" href="#electrode-impedance" title="Permalink to this headline">¶</a></h3>
+<p>The impedance of an electrode is a measure of its ability to resist the flow of charge across the electrode-solution interface (i.e., across the electronic conductor (metal) and ionic conductor (extracellular fluid)). It is the impedance of the whole electrode equivalent circuit we built yesterday, consisting of the resistance of the solution (R<sub>s</sub>), the resistance of the electrode metal (R<sub>m</sub>) and the resistance (R<sub>e</sub>) and capacitance (C<sub>e</sub>) of the double layer at the electrode-solution interface.
+Since R<sub>e</sub> is large, in the order of several megohms, and R<sub>s</sub> and R<sub>m</sub> are low (Ohms), the equivalent circuit is dominated by the double-layer capacitor, C<sub>e</sub>.  Therefore, in practice, the electrode is primarily a capacitor in series with R<sub>m</sub> and R<sub>s</sub> , whose leakage resistance Re, while not negligible, does not make an important contribution (Robinson, 1968).</p>
+<p>So far, we know that the impedance magnitude of a capacitor decreases with increased capacitance, and that electrode impedance is dominated by double layer capacitor, C<sub>e</sub>. Therefore, to decrease our electrode impedance, we need to increase the electrode capacitance C<sub>e</sub>. How can we increase the value of C<sub>e</sub>?</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{\epsilon}{A}\]</div>
+<p>The capacitance of a capacitor, in Farads, is proportional to the area of the capacitor plates (A) divided by the distance (d) between them. ε is the electrostatic constant. To make C bigger, we can increase A by increasing the surface area of the electrode. We can also coat electrodes with materials complemented with pseudo-capacitance, such as conducting polymers or transition metal oxide films, such as IrOx (Green, Lovell, Wallace, &amp; Poole-Warren, 2008; Musa, 2011).
+Electrode impedance magnitude is often measured at 1 kHz, before and after electrode coating, showing an impedance decrease up to 10-fold (Neto et al., 2018). By increasing the capacitance (C<sub>e</sub>) of our electrode, the electrode impedance (Z<sub>e</sub>) will be smaller, preserving more of our signal amplitude at V<sub>in</sub> (V<sub>in</sub> = V<sub>ec</sub>). Electrodes impedance values are in the kOhm to MOhm range at 1 kHz.</p>
+</section>
+<section id="recording-system-impedance">
+<h3>Recording System Impedance<a class="headerlink" href="#recording-system-impedance" title="Permalink to this headline">¶</a></h3>
+<p>The building blocks of the recording system are amplifiers. These integrated circuits provide incredibly high ‘input impedance’. It is as if any input has to cross a huge resistor first before getting to the amplifier.</p>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="howcellisnegative.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Resting Membrane Potential</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="intanpinout.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Intan Pinout</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020-2022, Open Ephys &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
