@@ -104,6 +104,8 @@ In contrast, to move the same particle from point B to point A, we would need to
 
 Because it is defined as a difference between two points, voltage always has to be measured between two points. When we do extracellular recordings, we measure the electric potential difference between the tip of our electrode and our ground or reference point.
 
+.. _whatisearth:
+
 Where is 0 volts?
 -----------------------------------------------
 To describe the height of a mountain, there is no such thing as absolute altitude; instead, we use ‘sea level’ as our point 0 and measure from there. A similar thing goes for voltage. We pick a point to call ‘0 V’ and compare the rest of the circuit to that. This point can be the negative terminal of a battery, the extracellular fluid, or a point at infinity, far from all sources of electric potential (Einevoll et al., 2013).

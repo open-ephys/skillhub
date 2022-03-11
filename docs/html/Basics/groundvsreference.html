@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ground vs Reference &#8212; SkillHub 0.0.0 documentation</title>
+    <title>Ground and Reference Pins &#8212; SkillHub 0.0.0 documentation</title>
     
     <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -35,7 +35,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Headstages" href="headstage.html" />
-    <link rel="prev" title="Reducing electrode impedance" href="goldplating.html" />
+    <link rel="prev" title="Different Electrophysiology Methods" href="ephysmethods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -155,24 +155,9 @@
    Different Electrophysiology Methods
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ephyssignals.html">
-   Electrophysiology: Signals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="filtering.html">
-   Filtering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="goldplating.html">
-   Reducing electrode impedance
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Ground vs Reference
+   Ground and Reference Pins
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,6 +183,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="io.html">
    Inputs/Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="platingelectrodes.html">
+   Plating Electrodes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="saturation.html">
+   Saturation
   </a>
  </li>
  <li class="toctree-l1">
@@ -264,8 +259,18 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-the-ground-pin-electrode">
-   What is the ground pin/electrode?
+  <a class="reference internal nav-link" href="#what-is-a-reference-pin-electrode">
+   What is a reference pin/electrode?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-ground-pin-on-a-headstage">
+   What is the ground pin on a headstage?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-to-connect-ground-and-reference">
+   When to connect ground and reference?
   </a>
  </li>
 </ul>
@@ -289,18 +294,35 @@
               
               <div>
                 
-  <section id="ground-vs-reference">
-<span id="refground"></span><h1>Ground vs Reference<a class="headerlink" href="#ground-vs-reference" title="Permalink to this headline">¶</a></h1>
-<section id="what-is-the-ground-pin-electrode">
-<h2>What is the ground pin/electrode?<a class="headerlink" href="#what-is-the-ground-pin-electrode" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=YE2cdXtzlF4">Start with Jakob Voigts’ talk about Ground vs Reference.</a></p>
-<p><a class="reference external" href="headstage">Headstages</a> contain instrumentation amplifiers, that can subtract the signal of the reference electrode (-) from our measurement electrode (+). This should get rid of the common mode that the signals share. However, if the difference between the - and + inputs becomes too large, the amplifiers will saturate- they won’t be able to provide the required output voltage.</p>
-<p>The world around us is, electrically, very noisy, and we are surrounded by large differences in electric potential. Just walking across a carpet can charge you to 10kV. The ‘-’ inputs of the two input operational amplifiers (op-amps) are connected to ground, via a bunch of resistors. If your mouse is charged to 10kV compared to ground, we’re asking these op-amps to deal with pretty high values individually, and they will saturate. Each op-amp can only go as high or low as its voltage rails (say the voltage rails are 3V, so with a 100x gain, a 0.03V input will saturate the amplifier).</p>
-<figure class="align-center">
-<a class="reference external image-reference" href="https://tinyurl.com/yjxekrv5"><img alt="_static/images/eea_fig-53.png" src="_static/images/eea_fig-53.png" /></a>
-</figure>
-<p>A ground pin or wire has very low impedance- it can source or sink as much current as necessary. It will bring anything it is connected to, close to 0 volt. We use the ground pin/electrode to first bring the mouse/our body to a reasonable voltage level - for example the voltage that our computer considers ground, or the ground in the wall power sockets. Once we’ve done that, our entire body is not floating at 10kV anymore but at 0V. We will still have remaining fluctuations, residual 50 or 60Hz noise from the mains supply, plus other muscles, electrostatic charge, bodies moving through the fields in the room and so on, but these can all be handled by the amplifier.</p>
-<p>One more detail: ground is not (always) earth, in many cases it is just a certain circuit we treat as 0. That circuit can have noise on it, just like any other circuit. If the ground you are using has a lot of 50/60Hz noise, we’ll be charging and discharging the animal (any animal is also a capacitor) constantly through the ground connection. If the ground screw/electrode is low enough impedance and close to our recording site, we’ll manage to keep the animal’s voltage equal to the changing GND level and we won’t notice this noise. However, if we put the ground screw/electrode too far away from where we record, e.g. we put the ground connection on the tail (extreme example), then the head of the animal won’t be sufficiently charged/discharged and we’ll encounter what will look like 50/60Hz noise in our tetrode recordings.</p>
+  <section id="ground-and-reference-pins">
+<span id="refground"></span><h1>Ground and Reference Pins<a class="headerlink" href="#ground-and-reference-pins" title="Permalink to this headline">¶</a></h1>
+<br>
+<center><iframe width="560" height="340" src="https://www.youtube.com/embed/YE2cdXtzlF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+<br><section id="what-is-a-reference-pin-electrode">
+<h2>What is a reference pin/electrode?<a class="headerlink" href="#what-is-a-reference-pin-electrode" title="Permalink to this headline">¶</a></h2>
+<p>The world around us is, electrically, very noisy, and we are surrounded by large differences in electric potential. Just walking across a carpet can charge you to 10kV, and different surfaces or objects can easily be at different potentials to each other.</p>
+<p>To detect 1mV spikes in this environment, electrophysiology hardware uses amplifiers. See the dedicated page to find out more. In brief, an amplifier has two inputs, a ‘+’ and a ‘-’ , and will output the difference between the two.</p>
+<img alt="../_images/subtract_ref.png" class="align-center" src="../_images/subtract_ref.png" />
+<p>To get this result, the ‘+’ pin must contain the signal of interest. The ‘-’ pin must be connected to something that shares only noise with the ‘+’ pin, but none of the real signal (or we will end up subtracting that out).</p>
+<p>This could be:</p>
+<ul class="simple">
+<li><p>A ‘ground’ pin or screw. This is a low-impedance route that will pick up local noise, but not specific activity such as spiking.</p></li>
+<li><p>A reference electrode in/on the brain. This electrode will detect the local activity, just like the measurement electrode does. Be aware that spikes detected on a reference electrode will show up as inverted spikes on the recording.</p></li>
+</ul>
+<img alt="../_images/ref_spikes.png" class="align-center" src="../_images/ref_spikes.png" />
+<p>What happens if the reference pin is not connected to anything? It will be ‘floating’ and picking up the random oscillations in the air, and subtracting this from the neuronal signal. This will look incredibly noisy.</p>
+</section>
+<section id="what-is-the-ground-pin-on-a-headstage">
+<h2>What is the ground pin on a headstage?<a class="headerlink" href="#what-is-the-ground-pin-on-a-headstage" title="Permalink to this headline">¶</a></h2>
+<p>Amplifiers can only provide as much voltage as their voltage rails allow. If the difference between the two inputs of the amplifier (multiplied by the amplifier gain) is higher than their voltage rails, the amplifier will saturate and only output a high (or low) voltage value. The amplifier is (eventually, through a bunch of components) connected to ground, it will be comparing the input to this 0V. The signal measured in the brain could easily sit several kV higher than ground, and the amplifier will not be able to handle this huge difference in potential. If the voltage rails are 3V, and the amplifier has a 100x gain, even a 0.03V input will <a class="reference internal" href="saturation.html#saturation"><span class="std std-ref">saturate</span></a> the amplifier.</p>
+<p>A ground pin has very low impedance, which means it can source or sink a lot of current. It will bring anything it is connected to, close to 0 volt. Implanting a screw or pin in the skull, and connecting it through a low-impedance wire to the ground on the headstage, brings this screw/pin and therefore the entire animal closer to ground, at 0V. This can be the voltage that our computer considers ground, or the ground in the wall power sockets. This discharges the large voltage difference between the animal and the measuring setup, bringing it back to a range that the amplifier can cope with. We will still have remaining fluctuations, residual 50 or 60Hz noise from the mains supply, plus other muscles, electrostatic charge, bodies moving through the electric fields in the room and so on, but these can all be handled by the amplifier.</p>
+<p>Additionally, <a class="reference internal" href="electronicsrefresher.html#whatisearth"><span class="std std-ref">ground is not (always) earth</span></a>, in many cases it is just a certain circuit we treat as 0. That circuit can have noise on it, just like any other circuit. If the ground you are using has a lot of 50/60Hz noise, it will be charging and discharging the animal (any animal is also a capacitor) constantly through the ground connection. If the ground screw/electrode is low enough impedance and close to our recording site, we’ll manage to keep the animal’s voltage equal to the changing GND level and we won’t notice this noise. However, if we put the ground screw/electrode too far away from where we record, e.g. we put the ground connection on the tail (extreme example), then the head of the animal won’t be sufficiently charged/discharged and we’ll encounter what will look like 50/60Hz noise in our tetrode recordings.</p>
+</section>
+<section id="when-to-connect-ground-and-reference">
+<h2>When to connect ground and reference?<a class="headerlink" href="#when-to-connect-ground-and-reference" title="Permalink to this headline">¶</a></h2>
+<p>In many ephys setups used for recording extracellular action potentials, you can short-circuit (connect with a wire) the REF and GND on the headstage. Your ground pin becomes your reference electrode AND draws the animal to ground. Action potentials are local signals and will not be detected by the ground pin.</p>
+<p>However, this is not always appropriate. This is a choice that will depend on your setup and the signal you are interested in. In EEG and EMG, for instance, because these signals are detectable over much larger ranges, it is pretty much impossible to place an electrode at a point where it serves as a useful ground (i.e. detects the same noise as the measurement) but does not detect EEG signals. For these experiments, strict conventions are used regarding reference electrode placement.</p>
 </section>
 </section>
 
@@ -310,11 +332,11 @@
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="goldplating.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="ephysmethods.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Reducing electrode impedance</p>
+            <p class="prev-next-title">Different Electrophysiology Methods</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="headstage.html" title="next page">

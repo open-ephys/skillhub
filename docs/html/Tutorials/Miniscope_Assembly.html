@@ -156,23 +156,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Basics/ephyssignals.html">
-   Electrophysiology: Signals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Basics/filtering.html">
-   Filtering
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Basics/goldplating.html">
-   Reducing electrode impedance
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../Basics/groundvsreference.html">
-   Ground vs Reference
+   Ground and Reference Pins
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,6 +183,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Basics/io.html">
    Inputs/Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/platingelectrodes.html">
+   Plating Electrodes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Basics/saturation.html">
+   Saturation
   </a>
  </li>
  <li class="toctree-l1">
@@ -372,7 +367,7 @@
                 
   <section id="assembling-an-oeps-v4-4-miniscope">
 <span id="refminiscopeassembly"></span><h1>Assembling an OEPS V4.4 Miniscope<a class="headerlink" href="#assembling-an-oeps-v4-4-miniscope" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="_static/images/v44_assembly/outline.jpg"><img alt="_static/images/v44_assembly/outline.jpg" src="_static/images/v44_assembly/outline.jpg" /></a>
+<a class="reference internal image-reference" href="../_images/outline.jpg"><img alt="../_images/outline.jpg" src="../_images/outline.jpg" style="width: 701.6999999999999px; height: 495.9px;" /></a>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="http://miniscope.org/">UCLA Miniscope</a> is an ongoing open-source project from Daniel Aharoni’s lab. See the <a class="reference external" href="https://github.com/Aharoni-Lab/Miniscope-v4/wiki">Miniscope V4 Wiki</a> for more information about this project.</p>
@@ -391,12 +386,12 @@
 <li><p>Epoxy (<a class="reference external" href="https://github.com/Aharoni-Lab/Miniscope-v4/wiki/Parts-List#glueepoxy">Overview by UCLA team here</a>)</p></li>
 <li><p>DAQ and Coax Cable</p></li>
 </ul>
-<img alt="_static/images/v44_assembly/mscope_fig-1.png" src="_static/images/v44_assembly/mscope_fig-1.png" />
+<img alt="../_images/mscope_fig-1.png" src="../_images/mscope_fig-1.png" />
 </section>
 <section id="prepare">
 <h2>1. Prepare<a class="headerlink" href="#prepare" title="Permalink to this headline">¶</a></h2>
 <p>a). Check all parts for any Delrin burrs sticking out. Scrape them off with a biopsy punch or tweezers.</p>
-<img alt="_static/images/v44_assembly/mscope_fig-2.png" src="_static/images/v44_assembly/mscope_fig-2.png" />
+<img alt="../_images/mscope_fig-2.png" src="../_images/mscope_fig-2.png" />
 </section>
 <section id="objective-module">
 <h2>2. Objective Module<a class="headerlink" href="#objective-module" title="Permalink to this headline">¶</a></h2>
@@ -405,7 +400,7 @@
 <source src="../_static/videos/testobjectivelens.mp4" type="video/mp4">
 </video></center><p>b). Place the objective module directly over the lens and push down. Make sure that you are pushing in a straight line onto the lens, as any angle can cause chipping. You may have to use some force to do this, if the objective module is a bit tight (you can hear in the video that it makes a sound). Downward force is ok <em>as long as the lens and objective module are completely aligned</em>. If you see the lens stick out at an angle, remove it and reposition it.</p>
 <p>Make sure the lens is completely flush with the body and does not stick out.</p>
-<img alt="_static/images/v44_assembly/mscope_fig-9.png" src="_static/images/v44_assembly/mscope_fig-9.png" />
+<img alt="../_images/mscope_fig-9.png" src="../_images/mscope_fig-9.png" />
 <center><video width="560" height="340" controls>
 <source src="../_static/videos/objlens01.mp4" type="video/mp4">
 </video></center><p>c). Once the lens is flush with the edge of the objective module, clean the edge of the lens with a soft cloth.</p>
@@ -413,7 +408,7 @@
 <p class="admonition-title">Warning</p>
 <p>Important: sometimes extra burrs come off due to the first lens. If they are not removed before inserting the second lens, they can become trapped between the two, which interferes with your image and is difficult to remove. To prevent this problem, inspect the module for small Delrin burrs once more. If they are already loose, you can tap the module gently to allow them to fall out. Otherwise, you can scrape them off using forceps. Be careful not to scratch the lens.</p>
 </div>
-<img alt="_static/images/v44_assembly/mscope_fig-3.png" class="align-center" src="_static/images/v44_assembly/mscope_fig-3.png" />
+<img alt="../_images/mscope_fig-3.png" class="align-center" src="../_images/mscope_fig-3.png" />
 <p>d). Then, repeat this with the second 3x6 mm lens, again making sure that the lens is standing on its flat edge. Push the objective module down until the second lens is flush with the edge of the objective module.</p>
 </section>
 <section id="excitation-module">
@@ -450,9 +445,9 @@
 <section id="assembly">
 <h2>5. Assembly<a class="headerlink" href="#assembly" title="Permalink to this headline">¶</a></h2>
 <p>a). Cut the extra tabs from the electrowettinglens PCB.</p>
-<img alt="_static/images/v44_assembly/mscope_fig-5.png" src="_static/images/v44_assembly/mscope_fig-5.png" />
+<img alt="../_images/mscope_fig-5.png" src="../_images/mscope_fig-5.png" />
 <p>b). Screw the PCB to the excitation module using the two holes.</p>
-<img alt="_static/images/v44_assembly/mscope_fig-6.png" src="_static/images/v44_assembly/mscope_fig-6.png" />
+<img alt="../_images/mscope_fig-6.png" src="../_images/mscope_fig-6.png" />
 <p>c). Carefully pre-bend the two circles in the PCB (do not press too hard, just gently shape them).</p>
 <p>d). You can now put an EWL in between these circles and attach the objective module to the emission module. Check that the EWL is in the correct orientation.</p>
 <center><video width="560" height="340" controls>

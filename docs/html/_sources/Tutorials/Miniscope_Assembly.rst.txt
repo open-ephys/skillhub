@@ -3,7 +3,7 @@
 ===================================
 Assembling an OEPS V4.4 Miniscope
 ===================================
-.. image:: ../_static/images/v44_assembly/outline.jpg
+.. image:: ../_static/images/v4_assembly/outline.jpg
   :scale: 30%
 
 Acknowledgements
@@ -25,13 +25,13 @@ Tools and Materials
 * DAQ and Coax Cable
 
 
-.. image:: ../_static/images/v44_assembly/mscope_fig-1.png
+.. image:: ../_static/images/v4_assembly/mscope_fig-1.png
 
 1. Prepare
 *******************************
 a). Check all parts for any Delrin burrs sticking out. Scrape them off with a biopsy punch or tweezers.
 
-.. image:: ../_static/images/v44_assembly/mscope_fig-2.png
+.. image:: ../_static/images/v4_assembly/mscope_fig-2.png
 
 2. Objective Module
 *******************************
@@ -48,7 +48,7 @@ b). Place the objective module directly over the lens and push down. Make sure t
 
 Make sure the lens is completely flush with the body and does not stick out.
 
-.. image:: ../_static/images/v44_assembly/mscope_fig-9.png
+.. image:: ../_static/images/v4_assembly/mscope_fig-9.png
 
 .. raw:: html
 
@@ -64,7 +64,7 @@ c). Once the lens is flush with the edge of the objective module, clean the edge
 .. warning::
   Important: sometimes extra burrs come off due to the first lens. If they are not removed before inserting the second lens, they can become trapped between the two, which interferes with your image and is difficult to remove. To prevent this problem, inspect the module for small Delrin burrs once more. If they are already loose, you can tap the module gently to allow them to fall out. Otherwise, you can scrape them off using forceps. Be careful not to scratch the lens.
 
-.. image:: ../_static/images/v44_assembly/mscope_fig-3.png
+.. image:: ../_static/images/v4_assembly/mscope_fig-3.png
   :align: center
 
 
@@ -141,11 +141,11 @@ g). If it looks clean, place the half-ball lens in the round pocket on the side 
 
 a). Cut the extra tabs from the electrowettinglens PCB.
 
-.. image:: ../_static/images/v44_assembly/mscope_fig-5.png
+.. image:: ../_static/images/v4_assembly/mscope_fig-5.png
 
 b). Screw the PCB to the excitation module using the two holes.
 
-.. image:: ../_static/images/v44_assembly/mscope_fig-6.png
+.. image:: ../_static/images/v4_assembly/mscope_fig-6.png
 
 c). Carefully pre-bend the two circles in the PCB (do not press too hard, just gently shape them).
 
