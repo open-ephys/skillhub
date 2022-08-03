@@ -7,7 +7,7 @@
 .. toctree::
   :hidden:
 
-  /Basics/index.rst
+  /Ephys Acquisition/index.rst
   /Tutorials/index.rst
   /Contact/disclaimer_terms_conditions.rst
 
@@ -18,9 +18,9 @@
         <div class="col mb-4">
           <div class="card h-100 text-center intro-card shadow">
             <a href="Basics/index.html">
-                <img src="_static/images/homepage/noun_books.svg" class="card-img-top" height="160">
+                <img src="_static/images/homepage/cable.svg" class="card-img-top" height="160">
                 <div class="card-body flex-fill">
-                  <p class="card-reference">Ephys Fundamentals</p>
+                  <p class="card-reference">Extracellular Ephys Acquisition</p>
                 </div>
             </a>
           </div>
