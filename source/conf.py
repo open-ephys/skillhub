@@ -176,7 +176,7 @@ epub_title = project
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "github_url": "https://github.com/ahleighton/skillhub",
+    "github_url": "https://github.com/open-ephys/skillhub",
     #"twitter_url": "https://twitter.com/openephys",
     "navigation_with_keys": True,
     'body_max_width': None,
@@ -198,7 +198,7 @@ html_theme_options = {
 #html_favicon = "_static/images/favicon.png"
 #
 html_context = {
-     "github_user": "ahleighton",
+     "github_user": "open-ephys",
      "github_repo": "skillhub",
      "github_version": "main",
      "doc_path": "main",
