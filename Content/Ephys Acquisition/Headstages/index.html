@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Headstages &#8212; SkillHub 0.0.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx_tabs/tabs.css" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Amplifiers" href="amplifiers.html" />
+    <link rel="prev" title="Tetrodes" href="../Electrodes/tetrodeintro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/oe_logo_name.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  All Topics
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../Tutorials/index.html">
+  Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../Contact/disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/open-ephys/skillhub" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Electrophysiology Acquisition
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Acquisition%20Board/index.html">
+     Acquisition Boards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Computer/index.html">
+     Software
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Electrodes/index.html">
+     Electrodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Electrodes/electrodetypes.html">
+       Types of Electrodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Electrodes/howelectrodeswork.html">
+       How do electrodes detect extracellular signals?
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Electrodes/platingelectrodes.html">
+       Plating Electrodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Electrodes/tetrodeintro.html">
+       Tetrodes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
+     Headstages
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="amplifiers.html">
+       Amplifiers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="groundvsreference.html">
+       Ground and Reference Pins
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="intanpinout.html">
+       Intan Pinout
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../IO/index.html">
+     Inputs/Outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cabling/index.html">
+     Connectors and Cables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Troubleshooting/index.html">
+     Saturation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../Electronics/index.html">
+   Electronics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Electronics/electronicsrefresher.html">
+     Electronics Refresher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Electronics/impedance.html">
+     Impedance
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-headstages-do">
+   What headstages do
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amplify">
+     Amplify
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filter">
+     Filter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#digitize">
+     Digitize
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#communicate-with-acquisition-board">
+     Communicate with Acquisition Board
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="headstages">
+<span id="refheadstages"></span><h1>Headstages<a class="headerlink" href="#headstages" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="amplifiers.html">Amplifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="amplifiers.html#amplifier-properties">Amplifier properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amplifiers.html#amplifiers-in-the-headstage-prevent-current-being-drawn">Amplifiers in the headstage prevent current being drawn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amplifiers.html#differential-amplifiers-remove-common-noise">Differential amplifiers remove common noise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="groundvsreference.html">Ground and Reference Pins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="groundvsreference.html#what-is-a-reference-pin-electrode">What is a reference pin/electrode?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groundvsreference.html#what-is-the-ground-pin-on-a-headstage">What is the ground pin on a headstage?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groundvsreference.html#when-to-connect-ground-and-reference">When to connect ground and reference?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intanpinout.html">Intan Pinout</a></li>
+</ul>
+</div>
+<p>Electrodes, whether they are silicon probes or tetrodes, will almost always be attached to a headstage. Before the signal reaches the headstage, it is an analogue signal of very small amplitude that is directly powered by the brain or biological tissue. The headstage amplifies, filters, and digitizes this signal, and provides a new power source to propagate the signal through the rest of the acquisition system. It is therefore almost always best to have the headstage as close as possible to the electrode.</p>
+<section id="what-headstages-do">
+<h2>What headstages do<a class="headerlink" href="#what-headstages-do" title="Permalink to this headline">#</a></h2>
+<section id="amplify">
+<h3>Amplify<a class="headerlink" href="#amplify" title="Permalink to this headline">#</a></h3>
+<p>Headstage contain <a class="reference internal" href="amplifiers.html#amplifiers"><span class="std std-ref">Amplifiers</span></a>. These electronic components allow the headstage to perform several functions:</p>
+<ul class="simple">
+<li><p>The input to the amplifiers comes from the electrodes, which can only provide a very limited amount of current. The output from amplifiers is powered by an external voltage source (through the acquisition board), which can provide a lot of current. The amplifier creates a barrier between the electrodes and the rest of the acquisition system, and prevents current being drawn from the electrode/brain. Instead, the much larger voltage source of the headstage drives the rest of the acquisition circuit. For more information see our <a class="reference external" href="https://ahleighton.github.io/OE-ephys-course/">ephys course</a> which includes simulator exercises to test this idea.</p></li>
+<li><p>Rejects common mode noise. The headstage compares the signal at a measurement electrode to a reference point, subtracting the reference signal. This gets rid of signal that the two points share (‘common mode noise’). By choosing the reference wisely, this will reduce noise.</p></li>
+<li><p>Finally, the amplifiers actually amplify; it increases the range of the signal to fit the dynamic range of our digitizer.</p></li>
+</ul>
+<center><iframe width="560" height="340" src="https://www.youtube.com/embed/NP6nE5P82e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></section>
+<section id="filter">
+<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">#</a></h3>
+<p>Most headstages will contain some filters to get rid of certain frequencies.</p>
+</section>
+<section id="digitize">
+<h3>Digitize<a class="headerlink" href="#digitize" title="Permalink to this headline">#</a></h3>
+<p>The analogue signal from the electrodes can take on any value in Volts. Digital signals are expressed in a binary format, taking on either value 0 or 1. In electronic circuits, this is expressed with two different voltage levels, for instance 1.2V represents 0, and 5V represents 1. Some noise in a digital circuit is therefore not such an issue; even if a noise signal increases the voltage on the 1.2V to 1.3 or 1.4, the circuit will not confuse it with 5V and will pass on the signal faithfully. Analogue signals are much more sensitive as any variation in voltage due to noise becomes indistinguishable from the desired signal.</p>
+</section>
+<section id="communicate-with-acquisition-board">
+<h3>Communicate with Acquisition Board<a class="headerlink" href="#communicate-with-acquisition-board" title="Permalink to this headline">#</a></h3>
+<p>In a typical acquisition system, the headstage is controlled by an acquisition board. The board will send commands to the headstage, requesting data from its channels, setting certain parameters, and providing it with power. The organisation of these commands is the data protocol that the two share. The Open Ephys Board uses an SPI protocol to allow the headstage and the acquisition board to communicate.</p>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../Electrodes/tetrodeintro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tetrodes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="amplifiers.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Amplifiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020-2022, Open Ephys &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

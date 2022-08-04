@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>How do electrodes detect extracellular signals? &#8212; SkillHub 0.0.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx_tabs/tabs.css" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Plating Electrodes" href="platingelectrodes.html" />
+    <link rel="prev" title="Types of Electrodes" href="electrodetypes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/oe_logo_name.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  All Topics
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../Tutorials/index.html">
+  Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../Contact/disclaimer_terms_conditions.html">
+  Terms and Conditions
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/open-ephys/skillhub" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Electrophysiology Acquisition
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Acquisition%20Board/index.html">
+     Acquisition Boards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Computer/index.html">
+     Software
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     Electrodes
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="electrodetypes.html">
+       Types of Electrodes
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       How do electrodes detect extracellular signals?
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="platingelectrodes.html">
+       Plating Electrodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tetrodeintro.html">
+       Tetrodes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Headstages/index.html">
+     Headstages
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Headstages/amplifiers.html">
+       Amplifiers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Headstages/groundvsreference.html">
+       Ground and Reference Pins
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Headstages/intanpinout.html">
+       Intan Pinout
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../IO/index.html">
+     Inputs/Outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Cabling/index.html">
+     Connectors and Cables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Troubleshooting/index.html">
+     Saturation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../Electronics/index.html">
+   Electronics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Electronics/electronicsrefresher.html">
+     Electronics Refresher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Electronics/impedance.html">
+     Impedance
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electrodes-in-solution-create-a-double-layer-interface">
+   Electrodes in solution create a double layer interface
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-equivalent-circuit-of-the-double-layer">
+   The equivalent circuit of the double layer
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-polarizable-electrodes">
+     Non-polarizable electrodes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polarizable-electrodes">
+     Polarizable electrodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="how-do-electrodes-detect-extracellular-signals">
+<h1>How do electrodes detect extracellular signals?<a class="headerlink" href="#how-do-electrodes-detect-extracellular-signals" title="Permalink to this headline">#</a></h1>
+<p>There are many different types of electrodes. All of them will be made of materials that conduct electricity. Electrodes can be as simple as a metal wires inserted directly into the brain.</p>
+<p>Neuronal action potentials cause the flow of ions in the extracellular fluid, which induces a subsequent rearrangement of charge inside the electrode, introducing the neuronal signal into our acquisition system.</p>
+<p>There are two general ways in which this can occur, depending on the electrode material. In <strong>nonpolarizable</strong> electrodes, charge can cross directly between the surface of the electrode and the extracellular fluid. The well-known silver-silver chloride (Ag-AgCl) electrode approaches the ideal nonpolarizable type. In these ‘charge transfer’ electrodes, surface-confined species are oxidized and reduced (Bard &amp; Faulkner, 2001, Merrill et al., 2005).</p>
+<p>The tungsten microelectrode is considered a ‘polarized’ electrode. In <strong>polarized</strong> electrodes, direct charge transfer is not possible. Instead, the electrode and the extracellular fluid become two sides of a <strong>capacitor</strong>, where positive charges in the extracellular fluid are held in place by an opposite strip of negatively charged electrons in the electrode. When neuronal activity increases the number of those positive charges, the subsequent strengthening of electric force recruits more electrons to the electrode wall. Conversely, if positive charges flow away, the electric force across the capacitor is reduced, releasing electrons inside the electrode and creating a capacitive current. Without a single charge ever travelling across the interface between the electrode and the extracellular fluid, changes in one can still induce current in the other.</p>
+<p>Read on for more details on how this occurs.</p>
+<section id="electrodes-in-solution-create-a-double-layer-interface">
+<h2>Electrodes in solution create a double layer interface<a class="headerlink" href="#electrodes-in-solution-create-a-double-layer-interface" title="Permalink to this headline">#</a></h2>
+<p>When a metal is placed in a saline solution two phenomena occur:</p>
+<ul class="simple">
+<li><p>Water dipoles close to the metal surface become oriented with the positive hydrogen facing the electrode.</p></li>
+<li><p>The solution close to the metal surface become depleted of negative ions (anions), leaving behind a cloud of positive ions (cations).</p></li>
+</ul>
+<p>This results in two narrow regions of equal and opposite charge. This is known as the electrical double layer (EDL). The double layer region (represented in pink in the schematics) has the ability to separate charges on both sides, and therefore has a capacitance ‘<a href="#id1"><span class="problematic" id="id2">|Ce|</span></a>’. The double layer also opposes the direct flow of current across it, and therefore has a resistance ‘<a href="#id3"><span class="problematic" id="id4">|Re|</span></a>’.</p>
+<img alt="../../../_images/double_layer_interface.png" class="align-center" src="../../../_images/double_layer_interface.png" />
+<center><i> The double layer interface between an electrode and the extracellular fluid.</i></center></section>
+<section id="the-equivalent-circuit-of-the-double-layer">
+<h2>The equivalent circuit of the double layer<a class="headerlink" href="#the-equivalent-circuit-of-the-double-layer" title="Permalink to this headline">#</a></h2>
+<p>We can describe the electrical behaviour of electrodes by making an ‘equivalent circuit’, getting rid of the specific shape or material and just representing the electrical properties of the double layer interface:</p>
+<img alt="../../../_images/dli_circuit.png" class="align-center" src="../../../_images/dli_circuit.png" />
+<center><i> The equivalent circuit describes the electrical properties of the double-layer interface between electrode and extracellular fluid.</i></center><p>In the above figure, the double layer interface between the solution and the electrode is represented by a parallel resistance and capacitance, in combination with resistances <a href="#id5"><span class="problematic" id="id6">|Rm|</span></a> (metal) and <a href="#id7"><span class="problematic" id="id8">|Rs|</span></a> (solution) in series.</p>
+<ul class="simple">
+<li><p><a href="#id9"><span class="problematic" id="id10">|Re|</span></a> represents leakage resistance of the electrode; the charge transfer due to charge carriers crossing the electrical double layer.</p></li>
+<li><p><a href="#id11"><span class="problematic" id="id12">|Ce|</span></a> is the capacitance of the electrical double layer at the interface of the exposed metal and the solution.</p></li>
+<li><p><a href="#id13"><span class="problematic" id="id14">|Rm|</span></a> (metal) is the resistance within the electrode itself, which depends on what the electrode is made of.</p></li>
+<li><p><a href="#id15"><span class="problematic" id="id16">|Rs|</span></a> (solution) is the resistance of the fluid surrounding the electrode.</p></li>
+</ul>
+<p>Because the resistance of the extracellular fluid <a href="#id17"><span class="problematic" id="id18">|Rs|</span></a> is small and independent of the electrode or acquisition system, we often simplify our equivalent circuits by leaving this value out.</p>
+<section id="non-polarizable-electrodes">
+<h3>Non-polarizable electrodes<a class="headerlink" href="#non-polarizable-electrodes" title="Permalink to this headline">#</a></h3>
+<p>Non-polarizable electrodes have a small <a href="#id19"><span class="problematic" id="id20">|Re|</span></a>, allowing charge-transfer across the electrode-solution interface. If Re is small, it bypasses the capacitor <a href="#id21"><span class="problematic" id="id22">|Ce|</span></a>, thus providing a direct path for the measurement of steady potential levels.</p>
+</section>
+<section id="polarizable-electrodes">
+<h3>Polarizable electrodes<a class="headerlink" href="#polarizable-electrodes" title="Permalink to this headline">#</a></h3>
+<p>Polarizable electrodes have large <a href="#id23"><span class="problematic" id="id24">|Re|</span></a> values, in the order of several megaOhms, and so they resist direct flow of charges across the double layer. Instead, the transition from ion flow in the solution to electron flow in the electrode is capacitive. The double layer will separate charges, with negative charges inside the electrode and positive charges on the side of the extracellular fluid holding each other in place. When cellular activity causes a redistribution of ions in the extracellular fluid, the resulting increase or decrease in attractive force will recruit or release electrons in the electrode. Either direction, a current will flow inside the electrode.</p>
+<p>Therefore, processes in polarizable electrodes are purely electrostatic and caused by the charging and discharging of the double layer capacitance. Although charge does not cross the interface, currents inside the recording system can flow when the potential or solution composition changes (Cooper, 1971).</p>
+<p>To give an example of a polarized electrode, a tungsten microelectrode like the one used by Hubel and Wiesel in the 1950’s and 60’s has:</p>
+<ul class="simple">
+<li><p><a href="#id25"><span class="problematic" id="id26">|Ce|</span></a> ~ 0.2 pF / um2 ~ 10 - 20 pF (unplated)</p></li>
+<li><p><a href="#id27"><span class="problematic" id="id28">|Re|</span></a> ~ 10 to 100 MOhm.</p></li>
+<li><p><a href="#id29"><span class="problematic" id="id30">|Rm|</span></a> ~ 10 to 100 Ohm (Rm= (resistivity x length)/ cross sectional area)</p></li>
+</ul>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p>Bard, A. J., &amp; Faulkner, L. R. (2001). Electrochemical methods Fundamentals and Applications. Molecular Biology (Second, Vol. 8). John Wiley &amp; Sons, Inc.</p>
+<p>Merrill, D.R., Bikson, M., and Jefferys, J.G.R. (2005). Electrical stimulation of excitable tissue: design of efficacious and safe protocols. Journal of Neuroscience Methods 141, 171–198.</p>
+<p>Musa, S., Rand, D.R., Cott, D.J., Loo, J., Bartic, C., Eberle, W., Nuttin, B., and Borghs, G. (2012). Bottom-Up SiO2 Embedded Carbon Nanotube Electrodes with Superior Performance for Integration in Implantable Neural Microsystems. ACS Nano 6, 4615–4628.</p>
+<p>Nelson, M.J., Bosch, C., Venance, L., and Pouget, P. (2013). Microscale Inhomogeneity of Brain Tissue Distorts Electrical Signal Propagation. J. Neurosci. 33, 2821–2827.</p>
+<p>Ray Cooper. (1971). Recording Changes in Electrical Properties in the Brain in Methods of Psychobiology. (R. D. Myers, Ed.) (Volume 1). London and New York: Academic Press.</p>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="electrodetypes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Types of Electrodes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="platingelectrodes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plating Electrodes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020-2022, Open Ephys &amp; Contributors.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
