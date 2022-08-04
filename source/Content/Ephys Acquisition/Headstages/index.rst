@@ -4,6 +4,12 @@
 Headstages
 ***********************************
 
+.. toctree::
+  :maxdepth: 2
+  :glob:
+
+  *
+
 Electrodes, whether they are silicon probes or tetrodes, will almost always be attached to a headstage. Before the signal reaches the headstage, it is an analogue signal of very small amplitude that is directly powered by the brain or biological tissue. The headstage amplifies, filters, and digitizes this signal, and provides a new power source to propagate the signal through the rest of the acquisition system. It is therefore almost always best to have the headstage as close as possible to the electrode.
 
 What headstages do

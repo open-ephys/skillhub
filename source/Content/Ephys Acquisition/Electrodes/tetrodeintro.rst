@@ -8,7 +8,7 @@ Tetrodes
 
 This is the part of the acquisition system that actually interacts with the brain. Tetrodes are a specific type of electrode, made up of four individual wires. These are twisted together and then heated to seal in place. The very ends of the tetrode wires are not insulated, making the tetrode sensitive to changes in electric potential at the tips. This potential will fluctuate with movement of charges, such as during an action potential or synaptic inputs.
 
-.. image:: ../_static/images/EEA/sh_fig-1.png
+.. image:: ../../../_static/images/tetrode_overview.png
   :align: center
 
 Tetrodes are usually held in place with a tetrode drive such as the :ref:`shuttleDrive <refshuttledrive>` which is attached to the skull and allows individual tetrodes to be lowered into the brain to target the cells of interest.
@@ -17,7 +17,7 @@ At the top of the tetrode, each individual wire is pinned to a separate channel 
 
 For clarity, only one tetrode is shown here, but the mouse shuttleDrive can hold 16 tetrodes (64 channels).
 
-.. image:: ../_static/images/EEA/eea_fig-1.png
+.. image:: ../../../_static/images/tetrode_connected.png
   :align: center
 
 
@@ -29,7 +29,7 @@ For instance, in the image on the left, we can see our tetrode with two neighbou
 
 Another advantage of tetrodes is that external noise and multi-unit activity is typically the same across channels. If your spike is different across channels, this is helpful confirmation that it is a real neuron and not just noise.
 
-.. image:: ../_static/images/EEA/eea_fig-3.png
+.. image:: ../../../_static/images/tetrode_units.png
   :align: center
 
 Making tetrodes
@@ -40,5 +40,5 @@ Before use, tetrode tips are electroplated, often with gold, which stacks on to 
 
 To plate electrodes you will need a way to measure impedance (to check it is decreasing with plating) and a current generator (to actually plate). Impedance should be 1-3 MOhm before plating and decrease to 250-350 KOhm. Make sure that impedance does not go much lower, as this is likely to be due to short-circuiting (i.e. two wires of the tetrode becoming connected). If plating does not reduce impedance, cut the tip and try again.
 
-.. image:: ../_static/images/EEA/eea_fig-7.png
+.. image:: ../../../_static/images/gold_plating.png
   :align: center

@@ -22,7 +22,7 @@ What is inside
 
 Recording electrophysiology requires high channel counts and high-frequency acquisition. This relies on the FPGA (Field Programmable Gate Array) at the heart of the Open Ephys Acquisition Board.
 
-.. image:: ../_static/images/Basics/ac_board_inside.png
+.. image:: ../../../_static/images/Basics/ac_board_inside.png
     :scale: 70%
     :align: center
 

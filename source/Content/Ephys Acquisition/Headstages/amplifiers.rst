@@ -5,7 +5,7 @@ Amplifiers
 ***********************************
 The operational amplifier is the most simple amplifier circuit. The operational amplifier has two inputs (+ and -), one output, and two power rails (e.g. a 3 and -3V power rail). The output of the amplifier is driven by the power rails, which means it can output a higher voltage than it receives.
 
-.. image:: ../_static/images/Basics/op-amp.png
+.. image:: ../../../_static/images/Basics/op-amp.png
   :align: center
 
 To get the properties we need for ephys, we use differential or instrumentation amplifiers, which are composed of operational amplifiers in specific configurations. To understand the difference see our Extracellular ephys course materials, days 2 and 3 `here <https://ahleighton.github.io/eeadec2021/Materials/eeadocsindex.html>`_.
@@ -34,7 +34,7 @@ A perfect 5V voltage source would always provide exactly 5 volts, no matter what
 
 A real voltage source has a bit of output impedance, which means it acts as a voltage source in series with an impedance. This is modelled here (click to open a simulator):
 
-.. image:: ../_static/images/Basics/eea_fig-83.png
+.. image:: ../../../_static/images/Basics/eea_fig-83.png
   :align: center
   :target: https://tinyurl.com/yfvzdxbz
   :scale: 120%
@@ -59,7 +59,7 @@ An instrumentation amplifier circuit can compare the signal from a measurement a
   <center><iframe width="560" height="340" src="https://www.youtube.com/embed/uPcv0gBjqbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
   <br>
 
-.. image:: ../_static/images/Basics/eea_fig-33.png
+.. image:: ../../../_static/images/Basics/eea_fig-33.png
   :align: center
   :scale: 80
 
@@ -68,7 +68,7 @@ An instrumentation amplifier circuit can compare the signal from a measurement a
 The instrumentation
 |
 
-.. image:: ../_static/images/Basics/eea_fig-53.png
+.. image:: ../../../_static/images/Basics/eea_fig-53.png
   :align: center
   :target: https://tinyurl.com/yjxekrv5
 

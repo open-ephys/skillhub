@@ -18,7 +18,7 @@ There are main two types of cable used:
 
   - Twisted wire cables
 
-  .. image:: ../_static/images/Basics/twisted_wires.png
+  .. image:: ../../../_static/images/Basics/twisted_wires.png
 
   - Coaxial cables
 

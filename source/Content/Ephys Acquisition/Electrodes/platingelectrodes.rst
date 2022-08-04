@@ -31,7 +31,7 @@ To make C bigger, we can increase A by increasing the surface area of the electr
 
     <div class="d-flex col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-right mx-auto" style = "max-width: 100%">
         <div class="card text-center intro-card border-white">
-        <img src="../_static/images/sh_fig-7.png" class="card-img-top">
+        <img src="../../../_static/images/sh_fig-7.png" class="card-img-top">
         </div>
     </div>
 
